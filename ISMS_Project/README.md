@@ -27,6 +27,7 @@ As a healthcare organization, TSHI is subject to the following frameworks addres
 
 # Repository Structure 
 
+```
 healthcare-risk-assessment/
 │
 ├── README.md                          
@@ -63,7 +64,7 @@ healthcare-risk-assessment/
 │
 └── Diagrams/
     └── Network_Topology.md            ← High-level network diagram of TSHI environment 
-
+```
 # Author 
 
 Brian Rivera
