@@ -33,37 +33,37 @@ healthcare-risk-assessment/
 ├── README.md                          
 │
 ├── Docs/
-│   ├── NIST_800-30_Methodology.md     ← Framework explanation and process steps
-│   └── Risk_Assessment_Policy.md      ← Internal policy governing this assessment
+│   ├── NIST_800-30_Methodology.md      ← Framework explanation and process steps
+│   └── Risk_Assessment_Policy.md       ← Internal policy governing this assessment
 │
 ├── Organization/
-│   ├── Organization_Profile.md        ← Who TSHI is, mission, and structure
-│   ├── IT_Environment.md              ← Systems, infrastructure, and technology
-│   └── Regulatory_Framework.md        ← Applicable laws and compliance obligations
+│   ├── Organization_Profile.md         ← Who TSHI is, mission, and structure
+│   ├── IT_Environment.md               ← Systems, infrastructure, and technology
+│   └── Regulatory_Framework.md         ← Applicable laws and compliance obligations
 │
 ├── Risk/
-│   ├── Asset_Inventory.md             ← Identified assets and their classifications
-│   ├── Threat_Identification.md       ← Threat sources and threat events
-│   ├── Vulnerability_Identification.md← Known weaknesses in systems and processes
-│   └── Risk_Register.md               ← Consolidated risk register with ratings
+│   ├── Asset_Inventory.md              ← Identified assets and their classifications
+│   ├── Threat_Identification.md        ← Threat sources and threat events
+│   ├── Vulnerability_Identification.md ← Known weaknesses in systems and processes
+│   └── Risk_Register.md                ← Consolidated risk register with ratings
 │
 ├── Matrices/
-│   ├── Likelihood_Impact_Matrix.md    ← Scoring methodology for likelihood and impact
-│   ├── Risk_Rating_Matrix.md          ← Overall risk ratings per identified risk
-│   └── Compliance_Matrix.md           ← Regulatory requirements mapped to controls
+│   ├── Likelihood_Impact_Matrix.md     ← Scoring methodology for likelihood and impact
+│   ├── Risk_Rating_Matrix.md           ← Overall risk ratings per identified risk
+│   └── Compliance_Matrix.md            ← Regulatory requirements mapped to controls
 │
 ├── Policies/
-│   ├── Access_Control_Policy.md       ← Rules governing access to TSHI systems
-│   ├── Incident_Response_Policy.md    ← Procedures for responding to security incidents
-│   ├── Data_Classification_Policy.md  ← How TSHI classifies and handles data
-│   └── Business_Continuity_Policy.md  ← Maintaining operations during disruptions
+│   ├── Access_Control_Policy.md        ← Rules governing access to TSHI systems
+│   ├── Incident_Response_Policy.md     ← Procedures for responding to security incidents
+│   ├── Data_Classification_Policy.md   ← How TSHI classifies and handles data
+│   └── Business_Continuity_Policy.md   ← Maintaining operations during disruptions
 │
 ├── Annexes/
-│   ├── Annex_A_RACI_Matrix.md         ← Roles and responsibilities across the assessment
-│   └── Annex_B_NIST_Control_Mapping.md← NIST 800-53 controls mapped to identified risks
+│   ├── Annex_A_RACI_Matrix.md          ← Roles and responsibilities across the assessment
+│   └── Annex_B_NIST_Control_Mapping.md ← NIST 800-53 controls mapped to identified risks
 │
 └── Diagrams/
-    └── Network_Topology.md            ← High-level network diagram of TSHI environment 
+    └── Network_Topology.md             ← High-level network diagram of TSHI environment 
 ```
 # Author 
 
