@@ -1,5 +1,5 @@
 # Tri-State Health Initiative (TSHI) - RISK ASSESSMENT 
--- This is a case study created for educational and portfolio purposes --
+<!-- This is a case study created for educational and portfolio purposes -->
 
 
 
