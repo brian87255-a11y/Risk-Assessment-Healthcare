@@ -152,7 +152,7 @@ This policy will be reviewed annually by the CISO and updated as needed to refle
 
 | Document | Locations |
 | :--- | :---: |
-| NIST SP 800-30 Methodology | [NIST 800-30 Methodology](NIST_800-30_Methodology.md)  |
+| NIST SP 800-30 Methodology | [NIST_800-30_Methodology.md](NIST_800-30_Methodology.md)  |
 | Organization Profile | [Organization Profile](Organization/Organization_Profile.md) |
 | Asset Inventory | [Asset Inventory](Risk/Asset_Inventory.md) |
 | Risk Register | [Risk Register](Risk.Register.md) |
