@@ -135,4 +135,28 @@ Failure to comply with this policy may result in:
 - Regulatory penalties under HIPAA and HITECH
 - Increased organizational risk exposure
 
-  Compliance with this policy will be mon
+  Compliance with this policy will be monitored through internal audits, annual assessments, and periodic management reviews.
+
+**Policy Review and Maintenance**
+--- 
+
+This policy will be reviewed annually by the CISO and updated as needed to reflect: 
+
+- Changes in the regulatory environment
+- Changes in TSHI's systems organizational structure
+- Lessons learned from security incidents or assessment findings
+- Updates to the NIST SP 800-30 framework or related NIST publications
+
+**Related Documents**
+--- 
+
+| Document | Locations |
+| :--- | :---: |
+| NIST SP 800-30 Methodology | [NIST 800-30 Methodology](Docs/NIST_800-30_Methodology.md)  |
+| Organization Profile | [Organization Profile](Organization/Organization_Profile.md) |
+| Asset Inventory | [Asset Inventory](Risk/Asset_Inventory.md) |
+| Risk Register | [Risk Register](Risk.Register.md) |
+| Risk Rating Matrix | [Risk Rating Matrix](Risk_Rating_Matrix.md) |
+| RACI Matrix | [RACI Matrix](Annex_A_RACI_Matrix.md) | 
+
+*Document ID: TSHI-POL-RA-001 | Version: 1.0 | Owner: CISO | Classification: Internal Use Only*
