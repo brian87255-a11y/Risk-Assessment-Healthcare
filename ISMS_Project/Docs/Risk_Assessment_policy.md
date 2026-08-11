@@ -153,10 +153,10 @@ This policy will be reviewed annually by the CISO and updated as needed to refle
 | Document | Locations |
 | :--- | :---: |
 | NIST SP 800-30 Methodology | [NIST Methodology](NIST_800-30_Methodology.md)  |
-| Organization Profile | [Organization Profile](Organization/Organization_Profile.md) |
-| Asset Inventory | [Asset Inventory](Risk/Asset_Inventory.md) |
-| Risk Register | [Risk Register](Risk.Register.md) |
-| Risk Rating Matrix | [Risk Rating Matrix](Risk_Rating_Matrix.md) |
-| RACI Matrix | [RACI Matrix](Annex_A_RACI_Matrix.md) | 
+| Organization Profile | [Organization Profile](../Organization/Organization_Profile.md) |
+| Asset Inventory | [Asset Inventory](../Risk/Asset_Inventory.md) |
+| Risk Register | [Risk Register](../Risk.Register.md) |
+| Risk Rating Matrix | [Risk Rating Matrix](../Risk_Rating_Matrix.md) |
+| RACI Matrix | [RACI Matrix](../Annex_A_RACI_Matrix.md) | 
 
 *Document ID: TSHI-POL-RA-001 | Version: 1.0 | Owner: CISO | Classification: Internal Use Only*
