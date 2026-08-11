@@ -99,7 +99,7 @@ Determine the magnitude of harm that would result if the threat explioted the vu
 Risk is determined by combining the likelihood of a threat even with the impact it would cause. The result is a risk rating used to prioritize remediation efforts. 
 
 > [!NOTE]
-> **Likeihood * Impact**
+> **Likelihood * Impact**
 
 Risk ratings are documented in the **Risk Register** are visualized in the **Risk Rating Matrix** found in the Matrices folder. 
 
