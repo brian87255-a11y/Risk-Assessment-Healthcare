@@ -45,25 +45,28 @@ For TSHI, this includes documenting the organization's profile, IT environment, 
 
 # Step 2 - Conduct the Assessment 
 
+
 The steps is the core of the assessment. It follows a logical sequence where the next task adds on the previous one. 
+
 
 **2a - Identity Threat Sources and Events**  
 
-Identify realistic threat sources that could harm TSHI's system or data, and the specific events those sources might cause. 
 
+Identify realistic threat sources that could harm TSHI's system or data, and the specific events those sources might cause. 
 
 **Threat sources examples:** Cybercriminals, malicious insiders, nation-states actors, and specific events those sources might cause. 
 
 **Threat event examples:** Ransomware, unauthorized access to ePHI, phishing attacks, system outages 
-
+---
 
 **2b - Identity Vulnerabilities and Predisposing Condtions**
+
 
 Identify weakness in TSHI's systems, processes, and environment that could be exploited by identified threat sources. 
 
 
 **Vulnerability examples:** Unpatched software, weak access controls, lack of staff security training, unencrypted data transmissions 
-
+---
 
 **2c - Determine Likeihood** 
 
@@ -74,6 +77,7 @@ For each identified risk, determine the probability that the threat event will g
 | High  | Threat source is highly motivated and capable; vulnerability is easily exploited | 
 | Moderate  |  The Threat is capable but faces challenges to exploitation |
 | Low  |  The threat source lacks capabilities; vulnerability is difficult to exploit | 
+---
 
 **2d - Determine Impact** 
 
@@ -84,6 +88,7 @@ Determine the magnitude of harm that would result if the threat explioted the vu
 | High  | Severe harm - significant loss of ePHI, major financial penalties, patient safety risk, organizational failure | 
 | Moderate  | Significant harm - limited ePHI exposure, operational disruption, reputational damage |
 | Low  | Minor harm - minimal data exposure, limited operational harm, recoverable quickly | 
+---
 
 **2e - Determine Risk** 
 
