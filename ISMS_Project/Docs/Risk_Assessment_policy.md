@@ -73,5 +73,64 @@ Risks that are not remediated must be formally accepted. Risk acceptance **must:
 
 Identified risks must be assigned of the following treatment options: 
 
+| Document | Description |
+| :--- | :---: |
+| Mitigate | Implement controls to reduce the likelihood or impact of the risk |
+| Accept | Formally acknowledge and accept the risk with documented approval |
+| Transfer | Shift the risk to a third party such as through insurance or outsourcing |
+| Avoid | Eliminate the activity or system that introduces the risk |
 
 
+**Roles and Responsibilities**
+---  
+
+| Role | Responsibility |
+| :--- | :---: |
+| Chief Information Security Officer (CISO) | Owns the policy; accountable for the risk assessment program; approves risk acceptance decisions |
+| Information Security Team | Conducts the risk assessment; maintain the risk register; prepares documentation |
+| IT Department | Provides technical information about systems and infrastructure; assess with vulnerability identification |
+| Department Managers | Identify critical business processes and assess within their departments; review finding relevant to their area |
+|Compliance Officer| Ensures assessment outputs satisfy HIPAA and other regulatory requirements |
+|Executive Leadership| Reviews high-level risk posture; approves significant risk acceptance decisions |
+
+
+**Risk Scoring Methodology** 
+--- 
+
+TSHI uses the following qualitative scoring scale in alignment with the NIST SP 800-30: 
+
+**Likelihood Scale:** 
+
+| Rating | Definition |
+| High | Threat source is highly motivated and capable; exploitation is likely within the assessment period |
+| Moderate | Threat source has some capability; exploitation is possible but not certain |
+| Low | Threat source lacks motivation or capability; exploitation is unlikely | 
+
+**Impact Scale:** 
+
+| Rating | Definition |
+| High | Severe harm to patients, significant ePHI exposure, major regulatory penalties, or threat to organizational viability |
+| Moderate | Moderate harm, limited data exposure, operational disruption, reputational damage |
+| Low | Minimal harm, limited or no dat exposure, quickly recoverable with minimal impact | 
+
+
+**Overall Risk Rating:**
+
+| Likelihood\Impact  | High | Medium | Low |
+| :--- | :---: | :---: | :---: |
+| **High** |  Critical |  High |  Moderate |
+| **Medium** |  High |  Moderate |  Low |
+| **Low** |  Moderate |  Low |  Low |
+
+
+**Policy Compliance** 
+--- 
+
+Failure to comply with this policy may result in: 
+
+- Disciplinary action up to and including termination of employment
+- Termination of vendor or contractor agreements
+- Regulatory penalties under HIPAA and HITECH
+- Increased organizational risk exposure
+
+  Compliance with this policy will be mon
