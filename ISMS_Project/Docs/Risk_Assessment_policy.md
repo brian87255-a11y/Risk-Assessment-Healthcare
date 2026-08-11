@@ -102,6 +102,7 @@ TSHI uses the following qualitative scoring scale in alignment with the NIST SP 
 **Likelihood Scale:** 
 
 | Rating | Definition |
+| :--- | :---: |
 | High | Threat source is highly motivated and capable; exploitation is likely within the assessment period |
 | Moderate | Threat source has some capability; exploitation is possible but not certain |
 | Low | Threat source lacks motivation or capability; exploitation is unlikely | 
@@ -109,6 +110,7 @@ TSHI uses the following qualitative scoring scale in alignment with the NIST SP 
 **Impact Scale:** 
 
 | Rating | Definition |
+| :--- | :---: |
 | High | Severe harm to patients, significant ePHI exposure, major regulatory penalties, or threat to organizational viability |
 | Moderate | Moderate harm, limited data exposure, operational disruption, reputational damage |
 | Low | Minimal harm, limited or no dat exposure, quickly recoverable with minimal impact | 
