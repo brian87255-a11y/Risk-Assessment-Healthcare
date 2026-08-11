@@ -51,15 +51,19 @@ The steps is the core of the assessment. It follows a logical sequence where the
 
 Identify realistic threat sources that could harm TSHI's system or data, and the specific events those sources might cause. 
 
+
 **Threat sources examples:** Cybercriminals, malicious insiders, nation-states actors, and specific events those sources might cause. 
 
 **Threat event examples:** Ransomware, unauthorized access to ePHI, phishing attacks, system outages 
+
 
 **2b - Identity Vulnerabilities and Predisposing Condtions**
 
 Identify weakness in TSHI's systems, processes, and environment that could be exploited by identified threat sources. 
 
+
 **Vulnerability examples:** Unpatched software, weak access controls, lack of staff security training, unencrypted data transmissions 
+
 
 **2c - Determine Likeihood** 
 
