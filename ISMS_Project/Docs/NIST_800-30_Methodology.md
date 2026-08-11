@@ -23,14 +23,8 @@ NIST SP 800-30 defines risk assessment as a three step process:
 
 > [!NOTE]
 > **Step 1: Prepare for the Assessment**
-> Gather all necessary documentation, define the evaluation scope, and schedule the kickoff meeting with the team.
-> 
 > **Step 2: Conduct the Assessment**
-> Interview key stakeholders, review the technical infrastructure, and log any discovered vulnerabilities or process gaps.
-> 
 > **Step 3: Maintain the Assessment**
-> Update the documentation regularly, track the remediation progress, and schedule the next recurring review period.
-
 
 # Step 1 - Prepare for the Assessment 
 
