@@ -137,10 +137,10 @@ The following represents TSHI's security posture at the time of this assessment:
 --- 
 | Document | Path |
 | :--- | ---: |
-|IT Environment |[] |
-| | |
-| | |
-| | |
+|IT Environment |[IT Environment](IT.Environment.md) |
+|Regulatory Framework |[Regulatory Framework](Regulatory_Framework.md) |
+|Asset Inventory |[Asset Inventory](../Risk/Asset_Inventory.md) |
+|Risk Assessment Policy |[Risk Assessment policy](../Docs/Risk_Assessment_Policy.md) |
 
 *Document ID: TSHI-ORG-PROF-001 | Version: 1.0 | Classification: Internal Use Only | Case Study — Tri-State Health Initiative (TSHI)*
 
