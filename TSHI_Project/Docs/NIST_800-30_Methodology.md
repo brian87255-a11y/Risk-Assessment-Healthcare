@@ -127,4 +127,15 @@ NIST SP 800-30 is designed to work alongside other NIST publications:
 | NIST SP 800-37 | Risk Management Framework (RMF) | Integrates 800-30 assessments into a system authorization process |
 | NIST CSF | Cybersecurity Framework | Voluntary framework that complements 800-30 for broader cyber risk management | 
 
+---
+
+## Official Publication and References
+
+| Document | Publisher | Link |
+|---|---|---|
+| NIST SP 800-30 Rev. 1 — Guide for Conducting Risk Assessments | National Institute of Standards and Technology | [Official Publication](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf) |
+| NIST SP 800-39 — Managing Information Security Risk | National Institute of Standards and Technology | [Official Publication](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-39.pdf) |
+| NIST SP 800-53 Rev. 5 — Security and Privacy Controls | National Institute of Standards and Technology | [Official Publication](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf) |
+| NIST Cybersecurity Framework 2.0 | National Institute of Standards and Technology | [Official Publication](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf) |
+
 Framework: NIST SP 800-30 Rev. 1 | Publisher: National Institute of Standards and Technology | Case Study — Tri-State Health Initiative (TSHI)
