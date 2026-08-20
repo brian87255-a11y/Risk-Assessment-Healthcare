@@ -100,15 +100,76 @@ TSHI currently maintains the following networks segments:
  
 |System|Purpose|Hosting|Contains ePHI|
 |:---|:---:|:---:|---:|
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+|Microsoft 365 (Exchange Online)|Email, calendar, collaboration (Teams, SharePoint)|Cloud |Yes; internal communications, some ePHI in email |
+|Billing and Revenue Cycle System|Medical billing, insurance claims, payment processing|On-premise|Yes; financial data, insurance information |
+|Human Resources Information System (HRIS)|Employee records, payroll, benefits|Cloud hosted (SaaS)|Yes; PII, payroll data|
+|Financial Management System|General ledger, accounts payable/receivable, budgeting|On-premise|Yes; financial data|
+|Help Desk Ticketing System|IT support request management|Cloud hosted (SaaS)|Yes; system information, user data| 
+
+**Medical Devices and IoT** 
+--- 
+
+TSHI operates a range of networked medical devices and IoT equipment across all facilities:
 
 
 
+|Device Category|Examples|Network Connected|OS/Firmware Status|Security Controls|
+|:---|:---:|:---:|---:|---:|
+|Patient Monitoring Systems|Vital signs monitors, telemetry units|Yes|Mixed; some outdated firmware|Limited|
+|Imaging Systems|MRI, CT, X-ray machines|Yes|Vendor-managed; not all current|Limited|
+|Infusion Pumps|IV medication delivery systems|Yes|Outdated firmware on older units|Minimal|
+|Laboratory Analyzers|Blood analyzers, diagnostic equipment|Yes|Vendor-managed|Limited|
+|Building Management Systems|HVAC, access control, elevators|Yes|Varies|Minimal|
+|Security Cameras (IP)|Physical surveillance across all locations|Yes|Mixed firmware versions|Minimal|
+
+**Cloud Services** 
+--- 
+|Service|Provider|Purpose|Data Classification|MFA Enforced|
+|:---|:---:|:---:|:---:|---:|
+|Microsoft 365|Microsoft Azure|Email, collaboration, productivity|Internal / some ePHI|Partially|
+|Epic Cloud Services|Epic Systems|EHR cloud-hosted modules|ePHI|Yes|
+|Cloud Backup|AWS S3|Offsite backup storage|ePHI/All data types|Yes|
+|Telehealth Platform|Third-party SaaS|Remote patient visits|ePHI|Yes|
+|HR System|Third-party SaaS|Employee records and payroll|PII/HR data|Yes|
+|Patient Scheduling|Third-party SaaS|Appointment management|ePHI/PII|Partially|
 
 
+ **Security Tools Currently Deployed** 
+ --- 
+ 
+|Tool Category|Tool/Solution|Coverage|Notes|
+|:---|:---:|:---:|---:|
+|Antivirus / Endpoint Protection|Microsoft Defender|All Windows endpoints|No EDR (Endpoint Detection and Response) capability|
+|Firewall|Next-Gen Firewall (NGFW)|Perimeter only|No internal network segmentation firewall|
+|Email Security|Microsoft Defender for Office 365 (Basic)|All staff email|Basic tier — limited advanced threat protection|
+|VPN|Cisco AnyConnect|Remote access|MFA not enforced|
+|Patch Management|Microsoft WSUS|Windows endpoints only|Medical devices and third-party apps patched inconsistently|
+|Log Management|Windows Event Logs|Endpoints and servers|Logs collected but no centralized SIEM for correlation|
+|Data Backup|Veeam|Servers and workstations|Backup integrity testing not performed regularly|
+|Physical Access Control|Badge readers|Main hospital only|Outpatient clinics use traditional key locks|
 
+
+**Notable Security Gaps:** 
+
+|Gap|Risk Implication|
+|:---|---:|
+|No SIEM deployed|Security events are logged but not correlated or alerted on in real time|
+|MFA not enforced for EHR or internal systems|Compromised credentials provide direct access to ePHI|
+|No EDR solution|Limited visibility into endpoint threats and attacker behavior post-compromise|
+|No Privileged Access Management|Admin accounts not monitored or controlled beyond standard AD policies|
+|Inconsistent patch management for medical devices|Known vulnerabilities may exist on networked clinical devices|
+|No DNS filtering|Malicious domains accessible from internal network| 
+
+
+**Related Documents** 
+--- 
+
+|Document|Path|
+|:---|---:|
+|Organization Profile|{}()|
+|Regulatory Framework||
+|Asset Inventory||
+|Vulnerability Identification||
+|Network Topology Diagram||
+
+*Document ID: TSHI-ORG-IT-001 | Version: 1.0 | Classification: Internal Use Only — Confidential | Case Study — Tri-State Health Initiative (TSHI)*
