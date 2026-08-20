@@ -166,10 +166,10 @@ TSHI operates a range of networked medical devices and IoT equipment across all 
 
 |Document|Path|
 |:---|---:|
-|Organization Profile|{}()|
-|Regulatory Framework||
-|Asset Inventory||
-|Vulnerability Identification||
-|Network Topology Diagram||
+|Organization Profile|[Organization Profile](Organization_Profile.md)|
+|Regulatory Framework|[Regulatory Framework](Regulatory_Framework.md)|
+|Asset Inventory|[Asset Inventory](../Risk/Asset_Inventory.md)|
+|Vulnerability Identification|[Vulnerability Identification](../Risk/Vulnerability_Identification.md)|
+|Network Topology Diagram|[Network Topology Diagram](../Diagrams/Network_Topology.md)|
 
 *Document ID: TSHI-ORG-IT-001 | Version: 1.0 | Classification: Internal Use Only — Confidential | Case Study — Tri-State Health Initiative (TSHI)*
