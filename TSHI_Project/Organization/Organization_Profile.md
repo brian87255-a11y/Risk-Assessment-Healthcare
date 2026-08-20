@@ -137,7 +137,7 @@ The following represents TSHI's security posture at the time of this assessment:
 --- 
 | Document | Path |
 | :--- | ---: |
-|IT Environment |[IT Environment](IT.Environment.md) |
+|IT Environment |[IT Environment](IT_Environment.md) |
 |Regulatory Framework |[Regulatory Framework](Regulatory_Framework.md) |
 |Asset Inventory |[Asset Inventory](../Risk/Asset_Inventory.md) |
 |Risk Assessment Policy |[Risk Assessment policy](../Docs/Risk_Assessment_Policy.md) |
