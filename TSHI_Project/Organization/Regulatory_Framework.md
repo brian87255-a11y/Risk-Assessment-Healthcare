@@ -80,6 +80,7 @@ Administrative Safeguards:
 |Tier 4 Willful Neglect(Not Corrected)|Violation due to willful neglect and not corrected|$50,000|$1,900,000|
 
 **HITECH Act**
+
 *Health Information Technology for Economic and Clinical Health Act of 2009
 Enforced By: HHS Office for Civil Rights (OCR)
 Applicability to TSHI: As a HIPAA covered entity, TSHI is directly subject to HITECH requirements.* 
@@ -126,6 +127,7 @@ Applicability to TSHI: TSHI must comply as an organization that owns or licenses
 |Expanded Definition of Private Information|Includes biometric information, email credentials, and account numbers in addition to traditional PII| 
 
 **PCI-DSS**
+
 *Payment Card Industry Data Security Standard
 Enforced By: Payment Card Industry Security Standards Council (PCI SSC)
 Applicability to TSHI: TSHI accepts credit and debit card payments for patient services and must comply with PCI-DSS to maintain payment processing capability.*
@@ -165,7 +167,7 @@ The NIST CSF organizes cybersecurity activities into six core functions:
 Type: Control Catalog
 Applicability: Used to select and map security controls to risks identified in this assessment.* 
 
-NIST SP 800-53 provides a comprehensive catalog of security and privacy controls organized into 20 control families. Selected controls from this catalog are mapped to TSHI's identified risks in Annexes/Annex_B_NIST_Control_Mapping.md. 
+NIST SP 800-53 provides a comprehensive catalog of security and privacy controls organized into 20 control families. Selected controls from this catalog are mapped to TSHI's identified risks in [Annex]{../Annexes/Annex_B_NIST_Control_Mapping.md} 
 
 **Regulatory Compliance Summary** 
 
