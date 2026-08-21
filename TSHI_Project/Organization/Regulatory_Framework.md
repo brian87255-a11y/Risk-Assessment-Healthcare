@@ -167,7 +167,7 @@ The NIST CSF organizes cybersecurity activities into six core functions:
 Type: Control Catalog
 Applicability: Used to select and map security controls to risks identified in this assessment.* 
 
-NIST SP 800-53 provides a comprehensive catalog of security and privacy controls organized into 20 control families. Selected controls from this catalog are mapped to TSHI's identified risks in [Annex]{../Annexes/Annex_B_NIST_Control_Mapping.md} 
+NIST SP 800-53 provides a comprehensive catalog of security and privacy controls organized into 20 control families. Selected controls from this catalog are mapped to TSHI's identified risks in [Annex_B_NIST_Control_Mapping.md](../Annexes/Annex_B_NIST_Control_Mapping.md). 
 
 **Regulatory Compliance Summary** 
 
