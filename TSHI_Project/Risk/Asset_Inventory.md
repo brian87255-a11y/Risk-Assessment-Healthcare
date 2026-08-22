@@ -1,4 +1,4 @@
-#Asset Inventory 
+# Asset Inventory 
 
 *Document ID: TSHI-RISK-AI-001 Version: 1.0 Classification: Internal Use Only — Confidential Last Updated: August 2026 Owner: IT Director / Information Security Team*
 
