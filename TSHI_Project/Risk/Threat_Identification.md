@@ -128,8 +128,8 @@ Threats are based on:
 
 |Document|Path|
 |:---|---:|
-|Asset Inventory|[Asset Inventory]{Asset_Inventory.md}|
-|Vulnerability Identification|[Vulnerability Identification]{Vulnerability_Identification.md}|
-|Risk Register|[Risk Register]{Risk_Register.md}|
-|IT Environment|[IT Environment]{../Organization/IT_Environment.md}|
-|Likelihood and Impact Matrix|[Likelihood and Impact Matrix]{../Matrices/Likelihood_Impact_Matrix.md}|
+|Asset Inventory|[Asset Inventory](Asset_Inventory.md)|
+|Vulnerability Identification|[Vulnerability Identification](Vulnerability_Identification.md)|
+|Risk Register|[Risk Register](Risk_Register.md)|
+|IT Environment|[IT Environment](../Organization/IT_Environment.md)|
+|Likelihood and Impact Matrix|[Likelihood and Impact Matrix](../Matrices/Likelihood_Impact_Matrix.md)|
