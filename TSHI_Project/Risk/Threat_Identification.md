@@ -50,6 +50,39 @@ Threats are based on:
 
 |Threat Source ID|Threat Source|Motivation|Capability|Relevance to TSHI|
 |:---|:---:|:---:|:---:|---:|
-||||||
-||||||
-||||||
+|TS-TP-001|Compromised Vendor|Attacker uses vendor access as entry point to TSHI|High — leverages trusted relationships|High — multiple vendors have direct EHR and system access|
+|TS-TP-002|Malicious Third-Party Contractor|Financial gain, espionage|Moderate — has temporary system access|Moderate — ~240 contractors with varying access|
+|TS-TP-003|Software Supply Chain Attack|Compromise of software used by TSHI|High — sophisticated nation-state technique|Moderate — TSHI relies on multiple third-party software products| 
+
+**Non-Adversarial Threat Sources** 
+
+|Threat Source ID|Threat Source|Type|Relevance to TSHI|
+|:---|:---:|:---:|---:|
+|TS-NA-001|Hardware Failure|Structural — technical|High — aging server infrastructure; some end-of-life hardware|
+|TS-NA-002|Software Errors and Bugs|Structural — technical|High — complex clinical systems with interdependencies|
+|TS-NA-003|Power Failure|Structural — environmental|High — loss of power affects all on-premise systems and patient care|
+|TS-NA-004|Network Failure|Structural — technical|High — MPLS circuit failure isolates clinic locations|
+|TS-NA-005|Human Error|Structural — human|Very High — misconfiguration, accidental deletion, improper handling of ePHI|
+|TS-NA-006|Natural Disaster (Hurricane/Flooding)|Environmental|Moderate — New Jersey and New York are hurricane and flood risk areas|
+|TS-NA-007|Fire|Environmental|Moderate — data center fire risk without full suppression system|
+|TS-NA-008|Pandemic or Public Health Emergency|Environmental|Moderate — demonstrated impact on healthcare operations during COVID-19| 
+
+**Threat Events** 
+---
+
+|Threat Event ID|Threat Event|Threat Source(s)|Assets Targeted|Description|
+|:---|:---:|:---:|:---:|---:|
+|TE-C-001|Ransomware Attack|TS-EXT-001, TS-EXT-005|SYS-001, INF-001, INF-003, DA-001|Malware encrypts TSHI systems and data, rendering them inaccessible until ransom is paid or systems are restored from backup|
+|TE-C-002|Phishing Attack|TS-EXT-006, TS-EXT-002|HUM-001, HUM-002, SYS-008|Deceptive emails trick staff into revealing login credentials, enabling unauthorized access to TSHI systems and ePHI|
+|TE-C-003|Unauthorized Access to EHR|TS-EXT-002, TS-INT-001, TS-TP-001|SYS-001, DA-001, DA-002|Attacker or insider gains unauthorized access to the Epic EHR system and exfiltrates patient records|
+|TE-C-004|Business Email Compromise|TS-EXT-006, TS-EXT-002|HUM-004, SYS-008, DA-011|Attacker impersonates executive or trusted party via email to authorize fraudulent financial transactions|
+|TE-C-005|Medical Device Exploitation|TS-EXT-001, TS-EXT-005|MED-001, MED-002, MED-003|Attacker exploits vulnerable networked medical devices to gain foothold in TSHI network or disrupt device operation|
+|TE-C-006|Data Exfiltration of ePHI|TS-EXT-002, TS-INT-001, TS-TP-001|DA-001, DA-002, DA-003, DA-004|Sensitive patient data is copied and transmitted to unauthorized external parties for sale or leverage|
+|TE-C-007|Denial of Service Attack|TS-EXT-001, TS-EXT-004|INF-004, INF-005, SYS-001|Network or system is flooded with traffic rendering clinical and administrative systems unavailable|
+|TE-C-008|Supply Chain Attack|TS-TP-003, TS-EXT-003|SYS-001, INF-006, INF-002|Malicious code introduced through compromised vendor software or update mechanism affects TSHI systems|
+|TE-C-009|Insider Data Theft|TS-INT-001, TS-INT-004|DA-001, DA-002, DA-007|Employee or privileged user deliberately exfiltrates patient records or sensitive organizational data|
+|TE-C-010|Privilege Escalation|TS-EXT-001, TS-INT-004|INF-002, INF-006, SYS-001|Attacker exploits misconfiguration or vulnerability to gain elevated privileges — potentially full domain control|
+|TE-C-011|Man-in-the-Middle Attack|TS-EXT-001, TS-EXT-005|INF-009, SYS-006, END-003|Attacker intercepts network communications between TSHI systems or between staff and cloud services|
+|TE-C-012|Misconfiguration of Cloud Services|TS-NA-005, TS-INT-002|005, TS-INT-002	INF-010, SYS-008, DA-001|Incorrect configuration of Microsoft 365 or AWS S3 exposes sensitive data or creates unauthorized access paths|
+
+**Physical Threat Event** 
