@@ -86,3 +86,50 @@ Threats are based on:
 |TE-C-012|Misconfiguration of Cloud Services|TS-NA-005, TS-INT-002|005, TS-INT-002	INF-010, SYS-008, DA-001|Incorrect configuration of Microsoft 365 or AWS S3 exposes sensitive data or creates unauthorized access paths|
 
 **Physical Threat Event** 
+
+|Threat Event ID|Threat Event|Threat Source(s)|Assets Targeted|Description|
+|:---|:---:|:---:|:---:|---:|
+|TE-P-001|Unauthorized Physical Access|TS-EXT-002, TS-INT-001|FAC-002, FAC-003, FAC-004, END-001|Unauthorized individual gains physical access to a clinic or workstation area and accesses systems or steals equipment|
+|TE-P-002|Theft of Endpoint Device|TS-EXT-002, TS-INT-001|END-003, END-004, DA-001|Laptop or tablet containing ePHI is stolen from staff or facility|
+|TE-P-003|Unauthorized Access to Data Center|TS-EXT-002, TS-INT-001|FAC-005, INF-001, INF-003|Unauthorized individual gains physical access to the primary data center| 
+
+**Non-Adversarial Threat Events** 
+
+|Threat Event ID|Threat Event|Threat Source(s)|Assets Targeted|Description|
+|:---|:---:|:---:|:---:|---:|
+|TE-NA-001|Unplanned System Outage|TS-NA-001, TS-NA-002|SYS-001, INF-001, INF-003|Hardware failure or software error causes unplanned downtime of critical clinical systems|
+|TE-NA-002|Extended Power Failure|TS-NA-003|INF-001, SYS-001, MED-001|Extended loss of power beyond UPS and generator capacity disrupts all on-premise systems and medical devices|
+|TE-NA-003|Accidental Data Deletion or Corruption|TS-NA-005, TS-INT-002|DA-001, DA-002, INF-003|Staff error or software bug results in unintentional deletion or corruption of critical patient data|
+|TE-NA-004|Network Connectivity Loss|TS-NA-004|INF-009, SYS-001, SYS-005|MPLS circuit failure isolates one or more clinic locations from central systems and EHR access|
+|TE-NA-005|Natural Disaster Impacting Facilities|TS-NA-006, TS-NA-007|FAC-001, FAC-002, FAC-003, FAC-004, INF-001|Hurricane, flooding, or fire damages TSHI facilities or the primary data center| 
+
+**Threat Prioritization Summary**
+---
+
+|Threat Event ID|Threat Event|Overall Priority|Primary Reason|
+|:---|:---:|:---:|---:|
+|TE-C-001|Ransomware Attack|Very High|Healthcare is most targeted sector; TSHI lacks SIEM and EDR|
+|TE-C-002|Phishing Attack|Very High|No MFA on most systems; staff not role-specifically trained|
+|TE-C-003|Unauthorized Access to EHR|Very High|No MFA on Epic; high value ePHI target|
+|TE-C-006|Data Exfiltration of ePHI|High|High value data; limited monitoring capability|
+|TE-C-009|Insider Data Theft|High|1,200 staff; limited access monitoring|
+|TE-C-005|Medical Device Exploitation|High|Outdated firmware; limited network segmentation|
+|TE-C-008|Supply Chain Attack|High|Multiple vendors with direct system access|
+|TE-C-004|Business Email Compromise|High|Executive accounts targeted; no advanced email filtering|
+|TE-C-010|Privilege Escalation|High|No PAM solution; AD admin accounts not tightly controlled|
+|TE-NA-001|Unplanned System Outage|Moderate|Aging infrastructure; no secondary data center|
+|TE-P-001|Unauthorized Physical Access|Moderate|Weak physical controls at three outpatient clinics|
+|TE-C-007|Denial of Service Attack|Moderate|Perimeter firewall provides some mitigation|
+|TE-NA-002|Extended Power Failure|Moderate|UPS and generators present but not tested regularly|
+|TE-NA-005|Natural Disaster|Low to Moderate|Geographic risk present; DR plan partially developed|
+
+**Related Documents** 
+--- 
+
+|Document|Path|
+|:---|---:|
+|Asset Inventory|[Asset Inventory]{}|
+|||
+|||
+|||
+|||
