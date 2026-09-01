@@ -13,7 +13,7 @@ The Risk Register serves as the primary output of the risk assessment and the pr
 
 
 **Risk Rating Methodology**
-
+---
 
 Risk is determined by combining the **Likelihood** of a threat event occurring with the **Impact** it would cause if it did. Both are rated on a three-point qualitative scale.
 
@@ -73,12 +73,15 @@ Risk is determined by combining the **Likelihood** of a threat event occurring w
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 A threat actor sends a phishing email to a TSHI staff member. The staff member clicks a malicious link and unknowingly installs ransomware. With no EDR to detect the malware and no SIEM to correlate suspicious behavior, the ransomware propagates across the network via Active Directory, encrypting the Epic EHR system, the SAN, and clinical workstations. Patient care is disrupted across all four facilities. Recovery is complicated by untested backups and an unexercised incident response plan.
 
 **Likelihood Justification:**
+
 Healthcare is the most ransomware-targeted sector. TSHI lacks MFA on EHR, EDR on endpoints, and advanced email filtering — making phishing-initiated ransomware highly probable.
 
 **Impact Justification:**
+
 Encryption of the EHR system directly threatens patient safety, triggers HIPAA breach notification obligations, and could result in regulatory penalties. Extended downtime affects 85,000 patients across four facilities.
 
 **Recommended Controls:**
@@ -110,12 +113,15 @@ Encryption of the EHR system directly threatens patient safety, triggers HIPAA b
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 A threat actor obtains valid EHR credentials through a phishing attack or by exploiting weak/reused passwords. With no MFA protecting the EHR system, the stolen credentials provide direct, unrestricted access to patient records for all 85,000 TSHI patients. The attacker exfiltrates ePHI for sale on criminal marketplaces. No SIEM is in place to detect the anomalous access pattern. HIPAA breach notification is triggered.
 
 **Likelihood Justification:**
+
 Credential theft via phishing is the most common initial access method in healthcare breaches. The absence of MFA on the EHR means a single compromised password is sufficient for full access.
 
 **Impact Justification:**
+
 Unauthorized access to ePHI for 85,000 patients triggers mandatory HIPAA breach notification, potential OCR investigation, and significant reputational harm. Patient identity theft and medical fraud may follow.
 
 **Recommended Controls:**
@@ -146,12 +152,15 @@ Unauthorized access to ePHI for 85,000 patients triggers mandatory HIPAA breach 
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 An attacker identifies a networked medical device running outdated firmware with a known vulnerability. Because medical devices share the clinical network with EHR workstations and are not segmented, the compromised device is used as a pivot point to reach the Epic EHR system and other clinical infrastructure. Beyond data exposure, device manipulation poses a direct patient safety risk — particularly for infusion pumps and patient monitoring systems.
 
 **Likelihood Justification:**
+
 Medical device vulnerabilities are well-documented and actively targeted. Outdated firmware and lack of segmentation make TSHI's devices accessible from within the clinical network.
 
 **Impact Justification:**
+
 Rated High elevated to Critical due to the dual impact: ePHI exposure AND potential patient safety risk from device manipulation. FDA and HHS have both issued warnings about medical device cybersecurity risks.
 
 **Recommended Controls:**
@@ -180,12 +189,15 @@ Rated High elevated to Critical due to the dual impact: ePHI exposure AND potent
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 A clinical staff member with legitimate EHR access deliberately exfiltrates patient records — potentially selling them to identity thieves or accessing records of specific individuals such as celebrities or personal acquaintances. With no SIEM or User Behavior Analytics in place, anomalous access patterns such as bulk record downloads or off-hours access go undetected. No formal access review process exists to detect overprivileged accounts.
 
 **Likelihood Justification:**
+
 Insider threats in healthcare are well-documented. The combination of broad clinical access, no behavioral monitoring, and no access review process elevates likelihood.
 
 **Impact Justification:**
+
 Patient record theft triggers HIPAA breach notification, potential criminal charges for the employee, and significant reputational damage to TSHI. Each compromised record represents a direct harm to a patient.
 
 **Recommended Controls:**
@@ -216,6 +228,7 @@ Patient record theft triggers HIPAA breach notification, potential criminal char
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 An attacker compromises or spoofs an executive email account and instructs the finance department to initiate a fraudulent wire transfer. Basic email security does not detect the spoofed or compromised account. No MFA protects the Microsoft 365 tenant admin accounts. Funds are transferred before the fraud is detected.
 
 **Recommended Controls:**
@@ -243,6 +256,7 @@ An attacker compromises or spoofs an executive email account and instructs the f
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 An attacker who gains initial access through phishing or a vulnerability exploit escalates privileges by targeting unmanaged administrative accounts in Active Directory. With no PAM solution controlling and monitoring privileged access, the attacker achieves domain administrator rights — effectively owning the entire TSHI network including the EHR system, virtualization platform, and backup infrastructure.
 
 **Recommended Controls:**
@@ -271,6 +285,7 @@ An attacker who gains initial access through phishing or a vulnerability exploit
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 An attacker compromises a vendor with privileged access to TSHI systems — such as the EHR vendor or managed service provider. The vendor's remote access credentials are used to move laterally through TSHI's environment. Because vendor remote access sessions are not audited, the intrusion is not detected until significant damage is done.
 
 **Recommended Controls:**
@@ -299,6 +314,7 @@ An attacker compromises a vendor with privileged access to TSHI systems — such
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 An unauthorized individual gains physical access to one of the three outpatient clinics through a door left unlocked or by tailgating staff. They access an unattended clinical workstation with an active EHR session or steal a laptop containing unencrypted patient data. Traditional key locks provide no audit trail and keys cannot be remotely revoked.
 
 **Recommended Controls:**
@@ -327,6 +343,7 @@ An unauthorized individual gains physical access to one of the three outpatient 
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 An attacker who has gained access to TSHI systems — through any initial access vector — exfiltrates large volumes of patient data over an extended period. Without a SIEM, EDR, or data loss prevention tool, the exfiltration goes undetected until the data appears for sale or an external party notifies TSHI of the breach.
 
 **Recommended Controls:**
@@ -354,6 +371,7 @@ An attacker who has gained access to TSHI systems — through any initial access
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 A significant hardware failure, power event, or natural disaster affects the primary data center in Newark. With no geographically redundant secondary site, TSHI has no failover capability. EHR access is lost across all four facilities. Clinical staff revert to paper-based processes but downtime-procedure documentation is incomplete. Recovery time extends significantly beyond the RTO due to untested restoration procedures.
 
 **Recommended Controls:**
