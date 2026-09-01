@@ -1,63 +1,19 @@
-<!-- 
-WHAT IS THIS FILE?
-The Risk Register is the most important document in the entire risk assessment.
-It is where everything comes together — assets, threats, and vulnerabilities
-are combined into complete risk entries, each with a likelihood rating,
-an impact rating, an overall risk score, and a recommended treatment.
-Think of it as the master spreadsheet of everything TSHI needs to worry about,
-ranked by priority so leadership knows where to focus resources first.
-In NIST SP 800-30 terms this file covers steps 2c, 2d, and 2e of the conduct phase:
-2c — Determine likelihood of threat occurrence
-2d — Determine magnitude of impact
-2e — Determine risk as a combination of likelihood and impact
-Every risk entry follows this structure:
-Risk ID → Asset(s) → Threat Event → Vulnerability → Likelihood → Impact → Risk Rating → Treatment
-The Risk Rating is determined by the matrix defined in Matrices/Risk_Rating_Matrix.md
-and summarized at the top of this file for reference.
--->
-
 # Risk Register — Tri-State Health Initiative (TSHI)
 
-**Document ID:** TSHI-RISK-RR-001
-**Version:** 1.0
-**Classification:** Internal Use Only — Confidential
-**Last Updated:** August 2026
-**Owner:** Chief Information Security Officer (CISO)
+**Document ID: TSHI-RISK-RR-001 Version: 1.0 Classification: Internal Use Only — Confidential Last Updated: August 2026 Owner: Chief Information Security Officer (CISO)**
 
+
+**Purpose**
 ---
-
-## 1. Purpose
-
-<!-- 
-The Risk Register serves as the authoritative record of all identified risks
-to TSHI's information systems and data.
-It is a living document — in a real organization it would be updated
-continuously as new risks are identified, existing risks change,
-and remediation efforts reduce or eliminate vulnerabilities.
-The register is the primary tool used by the CISO and executive leadership
-to make informed decisions about where to invest in security controls.
-Without a risk register, security decisions are made based on gut feeling
-rather than evidence — which is exactly what regulators and auditors look for.
--->
 
 This Risk Register documents all information security risks identified during the TSHI risk assessment conducted in accordance with NIST SP 800-30 Rev. 1. Each risk entry combines an identified threat event with one or more vulnerabilities and affected assets to produce a complete risk record including likelihood, impact, overall risk rating, and recommended treatment.
 
 The Risk Register serves as the primary output of the risk assessment and the primary input for security investment and remediation planning.
 
----
 
-## 2. Risk Rating Methodology
 
-<!-- 
-This section summarizes the scoring methodology so the reader
-does not need to flip to another file to understand the ratings.
-The 3x3 matrix is the core of NIST SP 800-30 qualitative risk scoring.
-Likelihood and Impact are each rated High / Moderate / Low.
-Their combination produces the overall risk rating.
-The most important thing to understand is that a High likelihood
-combined with a High impact always produces a Critical risk —
-meaning it must be addressed as a top priority regardless of cost.
--->
+**Risk Rating Methodology**
+
 
 Risk is determined by combining the **Likelihood** of a threat event occurring with the **Impact** it would cause if it did. Both are rated on a three-point qualitative scale.
 
@@ -94,43 +50,15 @@ Risk is determined by combining the **Likelihood** of a threat event occurring w
 | Transfer | Shift the risk to a third party through insurance or outsourcing |
 | Avoid | Eliminate the activity or system that introduces the risk |
 
+
+
+**Risk Register**
 ---
 
-## 3. Risk Register
+**Critical Risks***
 
-<!-- 
-Each risk entry is a complete record that connects:
-- The asset(s) at risk
-- The threat event that could cause harm
-- The vulnerability that enables the threat
-- The likelihood that the threat will occur
-- The impact if it does occur
-- The overall risk rating
-- The recommended treatment and specific controls
 
-The risks are ordered from highest to lowest rating so leadership
-can immediately see the most critical items at the top.
-
-RISK ID FORMAT: TSHI-RISK-[sequential number]
-This simple format makes each risk uniquely identifiable
-and easy to reference in meetings, reports, and remediation plans.
--->
-
-### 3.1 Critical Risks
-
-<!-- 
-Critical risks require immediate attention and executive-level awareness.
-These are situations where a highly capable threat actor
-can exploit an easily accessible vulnerability against a critical asset
-with severe consequences. In a real organization these would be
-escalated to the CISO and likely the Board within days of identification.
-No Critical risk should remain unaddressed without formal documented acceptance
-approved by executive leadership.
--->
-
----
-
-#### TSHI-RISK-001 — Ransomware Attack via Phishing
+**TSHI-RISK-001 — Ransomware Attack via Phishing**
 
 | Field | Details |
 |---|---|
@@ -165,9 +93,9 @@ Encryption of the EHR system directly threatens patient safety, triggers HIPAA b
 | Exercise Incident Response Plan | Conduct tabletop exercise simulating a ransomware scenario | Short-term |
 | Role-Specific Phishing Training | Implement phishing simulations and role-specific security awareness training | Short-term |
 
----
 
-#### TSHI-RISK-002 — Unauthorized Access to EHR via Compromised Credentials
+
+**TSHI-RISK-002 — Unauthorized Access to EHR via Compromised Credentials**
 
 | Field | Details |
 |---|---|
@@ -200,9 +128,9 @@ Unauthorized access to ePHI for 85,000 patients triggers mandatory HIPAA breach 
 | Conduct Access Reviews | Quarterly review of EHR user accounts and access levels | Short-term |
 | Implement SSO | Reduce credential sprawl and improve authentication management | Medium-term |
 
----
 
-#### TSHI-RISK-003 — Medical Device Exploitation as Network Pivot Point
+
+**TSHI-RISK-003 — Medical Device Exploitation as Network Pivot Point**
 
 | Field | Details |
 |---|---|
@@ -235,9 +163,9 @@ Rated High elevated to Critical due to the dual impact: ePHI exposure AND potent
 | Inventory and Patch Medical Devices | Work with vendors to apply available firmware updates; document devices where patching is not possible | Short-term |
 | Deploy Network Access Control (NAC) | Prevent unauthorized devices from connecting to clinical network segments | Medium-term |
 
----
 
-#### TSHI-RISK-004 — Insider Theft of ePHI
+
+**TSHI-RISK-004 — Insider Theft of ePHI**
 
 | Field | Details |
 |---|---|
@@ -269,21 +197,11 @@ Patient record theft triggers HIPAA breach notification, potential criminal char
 | Apply Minimum Necessary Access in EHR | Restrict clinical staff access to only the patient records relevant to their role | Short-term |
 | Strengthen Offboarding Process | Ensure immediate access revocation upon termination across all systems | Immediate |
 
----
 
-### 3.2 High Risks
+**High Risks**
 
-<!-- 
-High risks require planned remediation with defined timelines.
-They may not require immediate emergency response like Critical risks,
-but they must be formally assigned to an owner with a target remediation date.
-In a real organization these would be reviewed by the CISO monthly
-and progress tracked in the risk register.
--->
 
----
-
-#### TSHI-RISK-005 — Business Email Compromise Targeting Executive Accounts
+**TSHI-RISK-005 — Business Email Compromise Targeting Executive Accounts**
 
 | Field | Details |
 |---|---|
@@ -309,9 +227,8 @@ An attacker compromises or spoofs an executive email account and instructs the f
 | Financial Transfer Verification Policy | Require out-of-band verbal confirmation for all wire transfer requests above a threshold | Short-term |
 | Executive-Targeted Security Training | Spear phishing awareness training specifically for executive and finance staff | Short-term |
 
----
 
-#### TSHI-RISK-006 — Privilege Escalation via Unmanaged Admin Accounts
+**TSHI-RISK-006 — Privilege Escalation via Unmanaged Admin Accounts**
 
 | Field | Details |
 |---|---|
@@ -337,9 +254,9 @@ An attacker who gains initial access through phishing or a vulnerability exploit
 | Implement Tiered Admin Model | Separate day-to-day user accounts from privileged admin accounts | Short-term |
 | Privileged User Security Training | Role-specific training for IT staff on privileged account security | Short-term |
 
----
 
-#### TSHI-RISK-007 — Supply Chain Attack via Compromised Vendor
+
+**TSHI-RISK-007 — Supply Chain Attack via Compromised Vendor**
 
 | Field | Details |
 |---|---|
@@ -365,9 +282,9 @@ An attacker compromises a vendor with privileged access to TSHI systems — such
 | Enforce MFA for Vendor Accounts | Require MFA for all vendor accounts with access to TSHI systems | Immediate |
 | Review and Limit Vendor Access Scope | Ensure vendor access is limited to only what is required for their service | Short-term |
 
----
 
-#### TSHI-RISK-008 — Unauthorized Physical Access at Outpatient Clinics
+
+**TSHI-RISK-008 — Unauthorized Physical Access at Outpatient Clinics**
 
 | Field | Details |
 |---|---|
@@ -393,9 +310,9 @@ An unauthorized individual gains physical access to one of the three outpatient 
 | Implement Clean Desk Policy | Require staff to lock workstations and secure paper records when stepping away | Short-term |
 | Deploy Visitor Management System | Log all visitor access at all four facility locations | Medium-term |
 
----
 
-#### TSHI-RISK-009 — Data Exfiltration Due to Limited Monitoring
+
+**TSHI-RISK-009 — Data Exfiltration Due to Limited Monitoring**
 
 | Field | Details |
 |---|---|
@@ -421,9 +338,7 @@ An attacker who has gained access to TSHI systems — through any initial access
 | Enforce Encryption at Rest | Verify and enforce full disk encryption across all systems storing ePHI | Immediate |
 | Enable DNS Filtering | Block access to known data exfiltration and command-and-control domains | Short-term |
 
----
-
-#### TSHI-RISK-010 — Extended Downtime Due to No Secondary Data Center
+**TSHI-RISK-010 — Extended Downtime Due to No Secondary Data Center**
 
 | Field | Details |
 |---|---|
@@ -452,18 +367,9 @@ A significant hardware failure, power event, or natural disaster affects the pri
 
 ---
 
-### 3.3 Moderate Risks
+**Moderate Risks**
 
-<!-- 
-Moderate risks should be addressed through scheduled remediation
-as part of TSHI's regular security program.
-They do not require emergency response but should have
-defined owners and target dates assigned.
--->
-
----
-
-#### TSHI-RISK-011 — Cloud Service Misconfiguration Exposing ePHI
+**TSHI-RISK-011 — Cloud Service Misconfiguration Exposing ePHI**
 
 | Field | Details |
 |---|---|
@@ -478,6 +384,7 @@ defined owners and target dates assigned.
 | **Risk Treatment** | Mitigate |
 
 **Risk Description:**
+
 An IT administrator misconfigures an AWS S3 bucket or Microsoft 365 sharing setting, inadvertently making ePHI or sensitive organizational data publicly accessible. Cloud misconfigurations are among the most common causes of healthcare data exposures.
 
 **Recommended Controls:**
@@ -488,9 +395,9 @@ An IT administrator misconfigures an AWS S3 bucket or Microsoft 365 sharing sett
 | Establish Cloud Configuration Standards | Document and enforce baseline security configurations for all cloud services | Short-term |
 | Implement Change Management Process | Require review and approval for all changes to cloud service configurations | Short-term |
 
----
 
-#### TSHI-RISK-012 — Accidental Data Deletion Due to No Change Management
+
+**TSHI-RISK-012 — Accidental Data Deletion Due to No Change Management**
 
 | Field | Details |
 |---|---|
@@ -512,9 +419,9 @@ An IT administrator misconfigures an AWS S3 bucket or Microsoft 365 sharing sett
 | Test Backup Restoration Regularly | Validate ability to restore specific records and full systems from backup | Immediate |
 | Enable Recycle Bin and Versioning | Enable soft-delete and versioning on all storage systems and cloud services where available | Short-term |
 
----
 
-#### TSHI-RISK-013 — Network Connectivity Loss Isolating Clinic Locations
+
+**TSHI-RISK-013 — Network Connectivity Loss Isolating Clinic Locations**
 
 | Field | Details |
 |---|---|
@@ -536,18 +443,10 @@ An IT administrator misconfigures an AWS S3 bucket or Microsoft 365 sharing sett
 | Develop Clinic Downtime Procedures | Create and distribute EHR downtime procedures specific to each clinic location | Short-term |
 | Evaluate Local EHR Caching | Assess feasibility of local read-only EHR caching at clinic locations | Medium-term |
 
+
+
+**Risk Register Summary**
 ---
-
-## 4. Risk Register Summary
-
-<!-- 
-This summary table gives leadership the complete picture at a glance.
-Total risk counts by rating allow the CISO to communicate the security posture
-to executive leadership and the board in a single table.
-The remediation priority column tells leadership what to focus on first
-and in what timeframe — Immediate means within 30 days,
-Short-term means within 90 days, Medium-term means within 6 months.
--->
 
 | Risk ID | Risk Title | Rating | Treatment | Remediation Priority |
 |---|---|---|---|---|
@@ -581,14 +480,13 @@ Short-term means within 90 days, Medium-term means within 6 months.
 
 | Document | Path |
 |---|---|
-| Asset Inventory | [Asset_Inventory.md](Asset_Inventory.md) |
-| Threat Identification | [Threat_Identification.md](Threat_Identification.md) |
-| Vulnerability Identification | [Vulnerability_Identification.md](Vulnerability_Identification.md) |
-| Likelihood and Impact Matrix | [../Matrices/Likelihood_Impact_Matrix.md](../Matrices/Likelihood_Impact_Matrix.md) |
-| Risk Rating Matrix | [../Matrices/Risk_Rating_Matrix.md](../Matrices/Risk_Rating_Matrix.md) |
-| NIST Control Mapping | [../Annexes/Annex_B_NIST_Control_Mapping.md](../Annexes/Annex_B_NIST_Control_Mapping.md) |
-| Compliance Matrix | [../Matrices/Compliance_Matrix.md](../Matrices/Compliance_Matrix.md) |
+| Asset Inventory | [Asset Inventory](Asset_Inventory.md) |
+| Threat Identification | [Threat Identification](Threat_Identification.md) |
+| Vulnerability Identification | [Vulnerability Identification](Vulnerability_Identification.md) |
+| Likelihood and Impact Matrix | [Likelihood Impact Matrix](../Matrices/Likelihood_Impact_Matrix.md) |
+| Risk Rating Matrix | [Risk Rating Matrix](../Matrices/Risk_Rating_Matrix.md) |
+| NIST Control Mapping | [Annex B NIST Control Mapping](../Annexes/Annex_B_NIST_Control_Mapping.md) |
+| Compliance Matrix | [Compliance Matrix](../Matrices/Compliance_Matrix.md) |
 
----
 
 *Document ID: TSHI-RISK-RR-001 | Version: 1.0 | Classification: Internal Use Only — Confidential | Case Study — Tri-State Health Initiative (TSHI)*
