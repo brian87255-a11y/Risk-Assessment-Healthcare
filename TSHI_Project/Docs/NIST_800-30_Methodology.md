@@ -1,4 +1,11 @@
-# NIST SP 800-30 Risk Assessment Methodology 
+# NIST SP 800-30 Risk Assessment Methodology  
+
+<!---
+This files explains what the NIST SP 800-30 and specific methodology used
+During the Risk assessment this will be referenced, in our case
+it will help us answer to the Security Rule imposed by HIPAA. Protecting ePHI 
+is ultimately the goal.
+--->
 
 What is the NIST SP 800-30? 
 
@@ -130,6 +137,10 @@ NIST SP 800-30 is designed to work alongside other NIST publications:
 ---
 
 ## Official Publication and References
+
+<!---
+Although 800-30 is frequently mentioned 800-53 and 800-39 will also be cross referenced
+--->
 
 | Document | Publisher | Link |
 |---|---|---|
