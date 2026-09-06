@@ -1,43 +1,27 @@
 <!-- 
-WHAT IS THIS FILE?
-This file formally defines and documents the scoring methodology
-used to determine likelihood and impact ratings for every risk in the Risk Register.
-Think of it as the rulebook that explains HOW we scored each risk —
-so that anyone reading the Risk Register can understand exactly why
-a risk received the rating it did.
-In a real organization this methodology would be approved by the CISO
-before the assessment begins — you cannot change the scoring rules
-midway through an assessment because it would make results inconsistent.
-Consistency is what makes a risk assessment defensible to auditors and regulators.
-NIST SP 800-30 does not mandate a specific scoring scale —
-it allows organizations to define their own qualitative or quantitative scale.
-TSHI uses a three-point qualitative scale (High / Moderate / Low)
-which is the most common approach for organizations without
-dedicated risk management platforms.
+This files explains the thought process behind on how each risk is scored, 
+used to determine the likelihood and impact ratings for every listed risk in the Risk Register.
+NIST SP 800-30 does not define an exact rating, qualitative or quantitive scale. 
+In this study TSHI will use a three point qualitative scale those being High, Moderate, and Low. 
 -->
 
 # Likelihood and Impact Matrix — Tri-State Health Initiative (TSHI)
 
-**Document ID:** TSHI-MAT-LI-001
-**Version:** 1.0
-**Classification:** Internal Use Only
-**Last Updated:** August 2026
-**Owner:** Information Security Team
+**Document ID: TSHI-MAT-LI-001
+Version: 1.0
+Classification: Internal Use Only
+Last Updated: August 2026
+Owner: Information Security Team**
 
 ---
 
-## 1. Purpose
+**Purpose**
+--- 
 
 <!-- 
-This document serves two purposes:
-1. It defines the scoring criteria so ratings are applied consistently
-2. It documents the rationale behind TSHI's specific likelihood and impact factors
-   so that any assessor — internal or external — can apply the same methodology
-   and arrive at consistent results
-Consistency is critical in risk assessment because it allows you to:
-- Compare risks against each other fairly
-- Track whether risks increase or decrease over time
-- Demonstrate to regulators that your methodology is structured and repeatable
+This document serves two purposes: 
+- Explains the reasoning behind the specific impact and likelihood factors 
+- Defines the scoring criteria so it can be reused and applied consistently  
 -->
 
 This document defines the likelihood and impact scoring criteria used in the TSHI risk assessment conducted under NIST SP 800-30 Rev. 1. It establishes a consistent, repeatable methodology for evaluating all identified risks and ensures that ratings are applied uniformly across the Risk Register.
@@ -63,7 +47,7 @@ Likelihood ratings reflect the probability that a specific threat source will su
 - **Threat Source Characteristics** — the motivation, capability, and opportunity of the threat actor
 - **Vulnerability Characteristics** — how accessible, exploitable, and well-known the weakness is
 
-### 2.1 Likelihood Rating Definitions
+**Likelihood Rating Definitions**
 
 | Likelihood Rating | Qualitative Definition | Probability Range | Assessment Criteria |
 |---|---|---|---|
@@ -71,16 +55,10 @@ Likelihood ratings reflect the probability that a specific threat source will su
 | Moderate | The threat event may occur within the assessment period | 30% – 70% probability | Threat source has capability but faces some barriers; vulnerability is exploitable but requires effort or opportunity; some compensating controls exist |
 | Low | The threat event is unlikely to occur within the assessment period | Less than 30% probability | Threat source lacks motivation or capability; vulnerability is difficult to exploit; strong compensating controls significantly reduce exploitability |
 
-### 2.2 Threat Source Characteristic Ratings
+**Threat Source Characteristic Ratings**
 
 <!-- 
-This table breaks down how we evaluate the threat source itself.
-Not all attackers are equal — a nation-state actor has vastly more
-capability than an opportunistic script kiddie.
-Similarly, a disgruntled employee with admin access has far more
-opportunity than an external attacker who must first breach the perimeter.
-Evaluating these factors separately and then combining them
-produces a more defensible and precise likelihood rating.
+This tables breaks down how threat sources are evaluated
 -->
 
 | Threat Source Factor | High | Moderate | Low |
@@ -90,18 +68,8 @@ produces a more defensible and precise likelihood rating.
 | **Opportunity** | Direct or easy access to target systems — internal access, exposed services | Some access pathways exist but require effort | Limited access pathways — strong perimeter controls present |
 | **Historical Precedent** | This attack type is actively occurring against comparable organizations | This attack type has occurred in the sector but is not frequent | This attack type is rare or has not been observed in comparable environments |
 
-### 2.3 Vulnerability Characteristic Ratings
+**Vulnerability Characteristic Ratings**
 
-<!-- 
-The vulnerability side of likelihood evaluation looks at how easy
-the weakness is to exploit given current controls.
-A vulnerability with no compensating controls is far more exploitable
-than the same vulnerability with partial mitigations in place.
-CVSS (Common Vulnerability Scoring System) scores are referenced
-for technical vulnerabilities where applicable — these are industry-standard
-scores assigned to known software vulnerabilities that measure
-exploitability and impact on a scale of 0 to 10.
--->
 
 | Vulnerability Factor | High Exploitability | Moderate Exploitability | Low Exploitability |
 |---|---|---|---|
@@ -110,15 +78,12 @@ exploitability and impact on a scale of 0 to 10.
 | **Compensating Controls** | No compensating controls present | Partial compensating controls — reduce but do not eliminate exploitability | Strong compensating controls significantly reduce exploitability |
 | **Detection Probability** | Very unlikely to be detected — no monitoring or alerting in place | Possible to detect — some monitoring exists but not comprehensive | Likely to be detected — strong monitoring and alerting |
 
-### 2.4 Likelihood Determination Process
+**Likelihood Determination Process**
 
 <!-- 
 This flowchart describes the decision process for assigning a likelihood rating.
-In practice an assessor evaluates the threat source characteristics
-and vulnerability characteristics separately, then combines them.
 If both evaluate as High, the likelihood is High.
-If they are mixed, professional judgment is applied —
-which is why the assessor's experience and knowledge of the environment matters.
+If they are mixed, professional judgment is applied.
 -->
 
 The likelihood rating is determined by combining the threat source evaluation with the vulnerability exploitability evaluation:
@@ -153,28 +118,20 @@ Step 4: Document rationale in the Risk Register
 
 ---
 
-## 3. Impact Assessment Criteria
+**Impact Assessment Criteria**
 
 <!-- 
-Impact answers the question: If this threat successfully exploits this vulnerability,
-how much harm would result?
-NIST SP 800-30 defines impact in terms of harm to the organization's operations,
-assets, individuals, and mission.
-For TSHI as a healthcare organization, impact must be evaluated
-across multiple dimensions simultaneously:
+Impact for TSHI must be ovulated across these criteria 
 1. Patient safety — could this harm patients directly?
 2. Data confidentiality — how much ePHI is exposed?
 3. Operational continuity — how long and how severely is care disrupted?
 4. Financial — what are the regulatory penalties and recovery costs?
 5. Reputational — how does this affect patient and community trust?
-Healthcare is unique because operational disruption is not just a business problem —
-it is a patient safety problem. A hospital that cannot access patient records
-cannot safely deliver medications, conduct procedures, or make clinical decisions.
--->
+--->
 
 Impact ratings reflect the magnitude of harm to TSHI's mission, operations, patients, and stakeholders if a threat event successfully occurs. Impact is evaluated across five dimensions:
 
-### 3.1 Impact Dimensions
+**Impact Dimensions**
 
 | Impact Dimension | Description | Why It Matters for TSHI |
 |---|---|---|
@@ -184,7 +141,7 @@ Impact ratings reflect the magnitude of harm to TSHI's mission, operations, pati
 | **Financial** | Regulatory penalties, recovery costs, revenue loss | HIPAA penalties up to $1.9M per category; ransomware recovery costs average millions |
 | **Reputational** | Damage to patient trust and organizational standing | Patient trust is fundamental to healthcare — breaches cause lasting reputational harm |
 
-### 3.2 Impact Rating Definitions
+**Impact Rating Definitions**
 
 | Impact Rating | Qualitative Definition | Patient Safety | Data Exposure | Operational Impact | Financial Impact | Reputational Impact |
 |---|---|---|---|---|---|---|
@@ -192,21 +149,7 @@ Impact ratings reflect the magnitude of harm to TSHI's mission, operations, pati
 | **Moderate** | Significant harm in one or more dimensions; manageable with effort | Limited patient safety risk — disruption affects care quality but not safety directly | Limited ePHI exposure — hundreds of patients; notification likely required | Moderate disruption — systems unavailable for hours; one or two facilities affected | Significant costs — penalties possible; recovery measured in tens of thousands | Notable — local coverage; some patient concern but recoverable with transparent response |
 | **Low** | Minor harm; quickly recoverable with minimal lasting effect | No direct patient safety risk | Minimal data exposure — few individuals; notification may not be required | Brief disruption — systems restored within hours; limited facilities affected | Minor costs — no significant penalties; recovery straightforward | Minimal — no public attention; internal matter |
 
-### 3.3 Impact Determination Process
-
-<!-- 
-Impact is not just about the worst-case scenario —
-it is about the realistic expected outcome if the threat event occurs.
-An assessor must consider existing response capabilities,
-such as whether an incident response plan exists and has been tested,
-whether backups are available and verified,
-and whether alternative procedures can be activated.
-For TSHI, the untested incident response plan and unverified backups
-mean that the impact of many threats is elevated — because recovery
-may take longer and be less effective than assumed.
-This is an important nuance: impact is not just about the attack —
-it is also about your ability to respond.
--->
+**Impact Determination Process**
 
 ```
 Step 1: Evaluate impact across all five dimensions
@@ -226,15 +169,10 @@ Step 4: Document rationale in the Risk Register
 
 ---
 
-## 4. Applied Likelihood and Impact Ratings — TSHI Risk Register
+**Applied Likelihood and Impact Ratings — TSHI Risk Register**
 
-<!-- 
-This table documents the specific likelihood and impact ratings
-assigned to each risk in the Risk Register with the rationale for each.
-This is what makes the assessment auditable — anyone reviewing this document
-can see exactly how each rating was determined and why.
-Without documented rationale, ratings look arbitrary.
-With documented rationale, they are defensible to regulators and leadership.
+<!--  
+This tables explains why the given likelihood an rating assigned to that specific risk 
 -->
 
 | Risk ID | Risk Title | Likelihood | Likelihood Rationale | Impact | Impact Rationale |
@@ -255,15 +193,15 @@ With documented rationale, they are defensible to regulators and leadership.
 
 ---
 
-## 5. Related Documents
+**Related Documents**
 
 | Document | Path |
 |---|---|
-| Risk Register | [../Risk/Risk_Register.md](../Risk/Risk_Register.md) |
-| Risk Rating Matrix | [Risk_Rating_Matrix.md](Risk_Rating_Matrix.md) |
-| Threat Identification | [../Risk/Threat_Identification.md](../Risk/Threat_Identification.md) |
-| Vulnerability Identification | [../Risk/Vulnerability_Identification.md](../Risk/Vulnerability_Identification.md) |
-| NIST 800-30 Methodology | [../Docs/NIST_800-30_Methodology.md](../Docs/NIST_800-30_Methodology.md) |
+| Risk Register | [Risk Register](../Risk/Risk_Register.md) |
+| Risk Rating Matrix | [Risk Rating Matrix](Risk_Rating_Matrix.md) |
+| Threat Identification | [Threat Identification](../Risk/Threat_Identification.md) |
+| Vulnerability Identification | [Vulnerability Identification](../Risk/Vulnerability_Identification.md) |
+| NIST 800-30 Methodology | [NIST 800-30 Methodology](../Docs/NIST_800-30_Methodology.md) |
 
 ---
 
