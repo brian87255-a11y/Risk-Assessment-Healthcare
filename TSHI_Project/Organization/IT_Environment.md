@@ -1,5 +1,11 @@
 # IT Environment - Tri-State Health Initiative (TSHI)
 
+<!---
+This document lays out the assets those and not limited to person, information, devices, and infrastructure. 
+Documenting is necessary because before we can assess we need to understand what TSHI assess are 
+then we can consider the potential risk associated with them 
+--->
+
 *Document ID: TSHI-ORG-IT-001 Version: 1.0 Classification: Internal Use Only — Confidential Last Updated: August 2026 Owner: IT Director*
 
 **Overview** 
