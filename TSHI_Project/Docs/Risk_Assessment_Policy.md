@@ -1,4 +1,9 @@
 # Risk Assessment Policy 
+<!---
+This document help to lay the foundation, before assessing we understand the 
+rules and procedures. Who will need to answer? What constitutes an unscheduled assessment? 
+What type of types of documentation is needed? Who can accept risk? What happens after a violation? 
+--->
 
 **Organization:** Tri-State Health Initiative (TSHI) Document ID: TSHI-POL-RA-001 Version: 1.0 Status: Active Effective Date: January 1, 2026 Review Date: January 1, 2027 Owner: Chief Information Security Officer (CISO) 
 --- 
@@ -34,9 +39,21 @@ This policy applies to:
 
 **Policy Statements**
 --- 
+<!---
+Defining when risk assessment is critical as without a rule, 
+risk assessments could possibly become inconsistent. 
+Inconsistency could lead to harmful outcome that would else 
+caught by a regulated risk assessment.
+--->
 
 **Risk Assessment Requirement** 
 TSHI must conduct a formal information security risk assessment at least **annually.** The assessment must follow the NIST SP 800-30 Rev. 1 methodology and mist be documented in a format that can be reviewed by auditors and regulators. 
+
+<!-- 
+Triggered Assessments are ones that happen outside the natural annual flow. 
+Multiple reasons can constitute a assessment those being acquired merger, new system
+a breach, new regulations. HIPAA mandates reassessment when changes are introduced into a the environment
+-->
 
 **Triggered Assessments** 
 In addition to annual assessment, a risk assessment must be initiated when any of the following events occurs: 
