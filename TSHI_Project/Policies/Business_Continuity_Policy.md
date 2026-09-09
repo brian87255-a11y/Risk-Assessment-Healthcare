@@ -1,53 +1,29 @@
 <!-- 
-WHAT IS THIS FILE?
-This is TSHI's Business Continuity Policy — the formal document that governs
+This is TSHI's Business Continuity Policy  the formal document that governs
 how TSHI maintains essential operations during a disruption
 and recovers to full capability afterward.
-Business continuity and disaster recovery are related but distinct concepts
-that are commonly confused — even by experienced professionals.
+
 Business Continuity (BC) = keeping the business running DURING a disruption
 Disaster Recovery (DR) = restoring IT systems AFTER a disruption
-Think of BC as what your staff does when systems go down
-(activate paper-based downtime procedures, redirect patients, communicate with staff)
-and DR as what IT does to bring the systems back up.
-Both are needed. BC without DR means you can survive the event
-but you cannot get back to normal. DR without BC means IT can restore
-systems but nobody knows what to do in the meantime.
-For a healthcare organization this is especially critical
-because clinical operations cannot simply pause.
-Patients still need care when the EHR is down.
-Medications still need to be dispensed.
-Lab results still need to be reported.
-This policy is required under HIPAA Security Rule
+
 45 CFR § 164.308(a)(7) — Contingency Plan.
 -->
 
 # Business Continuity Policy — Tri-State Health Initiative (TSHI)
 
-**Document ID:** TSHI-POL-BC-001
-**Version:** 1.0
-**Classification:** Internal Use Only
-**Effective Date:** August 2026
-**Review Date:** August 2027
-**Owner:** Chief Operating Officer (COO) / Chief Information Security Officer (CISO)
-**Approved By:** Chief Executive Officer (CEO)
+**Document ID: TSHI-POL-BC-001
+Version: 1.0
+Classification: Internal Use Only
+Effective Date: August 2026
+Review Date: August 2027
+Owner: Chief Operating Officer (COO) / Chief Information Security Officer (CISO)
+Approved By: Chief Executive Officer (CEO)**
 
+
+
+**Purpose**
 ---
 
-## 1. Purpose
-
-<!-- 
-The purpose of business continuity planning is to ensure
-that TSHI can maintain patient care and essential operations
-even when systems fail, disasters occur, or security incidents disrupt services.
-The purpose is not just to protect IT — it is to protect patients.
-A hospital that cannot access medication records during an EHR outage
-risks patient harm through medication errors.
-A clinic that cannot reach the central lab system
-may delay critical diagnoses.
-Business continuity planning exists because TSHI's mission —
-delivering healthcare — cannot pause just because technology fails.
--->
 
 This policy establishes TSHI's business continuity program, defining the requirements for maintaining essential clinical and operational functions during disruptive events and recovering to full operational capability as quickly as possible.
 
@@ -60,9 +36,9 @@ This policy supports compliance with:
 - NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems
 - NIST Cybersecurity Framework 2.0 — Recover Function
 
----
 
-## 2. Scope
+**Scope**
+---
 
 This policy applies to all TSHI facilities, departments, systems, and personnel. It covers all categories of disruption including:
 
@@ -74,23 +50,17 @@ This policy applies to all TSHI facilities, departments, systems, and personnel.
 | Public health emergencies | Pandemic, mass casualty event |
 | Third-party failures | Cloud provider outage, vendor system failure, MPLS circuit failure |
 
+
+
+**Key Definitions and Metrics**
 ---
 
-## 3. Key Definitions and Metrics
-
 <!-- 
-These terms and metrics are essential vocabulary for business continuity
-and disaster recovery. They appear constantly in certifications,
-interviews, and real-world BC/DR conversations.
-RTO — how long can we be down before it becomes unacceptable?
-RPO — how much data can we afford to lose?
-MTD — what is the absolute maximum we can be down before we fail as an organization?
-MTBF — how often does a system fail on average?
-MTTR — how long does it take to fix a failed system on average?
-These five metrics together describe the resilience of an organization's systems.
-In a risk assessment or BC planning conversation,
-being able to define and apply all five shows a level of maturity
-that most entry-level candidates do not have.
+RTO (Recovery Time Objective) — how long can we be down before it becomes unacceptable?
+RPO (Recovery Point Ojective) — how much data can we afford to lose?
+MTD (Maximum Tolerable Downtime) — what is the absolute maximum we can be down before we fail as an organization?
+MTBF (Mean Time Between Failures) — how often does a system fail on average?
+MTTR (Mean Time To Recovery) — how long does it take to fix a failed system on average?
 -->
 
 | Term | Definition | TSHI Application |
@@ -101,20 +71,19 @@ that most entry-level candidates do not have.
 | **MTBF — Mean Time Between Failures** | The average time a system operates between failures — used to predict failure frequency | Tracked by IT for critical infrastructure components |
 | **MTTR — Mean Time to Repair** | The average time required to restore a failed system to operation — used to validate RTO targets | Tracked by IT for critical infrastructure components |
 
+
+**Business Impact Analysis Summary**
 ---
 
-## 4. Business Impact Analysis Summary
-
 <!-- 
-The Business Impact Analysis (BIA) is the foundation of business continuity planning.
-It identifies which business processes are critical,
+The Business Impact Analysis (BIA) identifies which business processes are critical,
 what systems support them, and what the impact of losing those systems would be.
-The BIA is what determines the RTO and RPO targets —
+The BIA is what determines the RTO and RPO targets. 
 a process with a patient safety impact gets a shorter RTO
 than a process that is inconvenient but not dangerous.
 This section summarizes the BIA findings that were developed
 during the Organization Profile and risk assessment phases.
-A full BIA would be a separate detailed document in a real organization —
+A full BIA would be a separate detailed document in a real organization 
 here we document the key findings that drive BC planning decisions.
 -->
 
@@ -133,9 +102,10 @@ The BIA identified the following critical business processes and their recovery 
 | 9 — Moderate | Employee HR and payroll | HRIS | None direct | 72 hours | 24 hours |
 | 10 — Low | General administrative email and collaboration | Microsoft 365 | None direct — phone backup available | 8 hours | 4 hours |
 
----
 
-## 5. Recovery Objectives by System
+
+**Recovery Objectives by System**
+---
 
 <!-- 
 This table translates the BIA findings into specific RTO and RPO targets
@@ -154,35 +124,29 @@ This is TSHI-RISK-010 in the Risk Register.
 
 | System | Classification | RTO Target | RPO Target | Current Recovery Capability | Gap |
 |---|---|---|---|---|---|
-| Epic EHR | Critical | 4 hours | 1 hour | Veeam backup — estimated 6-12 hour restore | ⚠️ RTO gap — exceeds target under major failure |
-| PACS | Critical | 4 hours | 1 hour | Veeam backup — estimated 4-8 hour restore | ⚠️ RTO gap possible under major failure |
-| Laboratory Information System | Critical | 8 hours | 2 hours | Veeam backup — estimated 4-6 hour restore | ✅ Likely achievable |
-| Pharmacy Management System | Critical | 4 hours | 1 hour | Veeam backup — estimated 4-8 hour restore | ⚠️ RTO gap possible |
-| Active Directory | Critical | 2 hours | 1 hour | Veeam backup — DC replication provides partial redundancy | ⚠️ RTO gap under site-wide failure |
-| Microsoft 365 | High | 8 hours | 4 hours | Microsoft cloud resilience — generally high availability | ✅ Achievable — Microsoft SLA |
-| Billing System | Moderate | 48 hours | 24 hours | Veeam backup — estimated 4-6 hour restore | ✅ Achievable |
-| Patient Scheduling | Moderate | 24 hours | 4 hours | Cloud-hosted SaaS — provider DR applies | ✅ Achievable — provider SLA |
-| AWS S3 Backup | High | N/A | N/A | AWS multi-region redundancy | ✅ Highly available |
+| Epic EHR | Critical | 4 hours | 1 hour | Veeam backup — estimated 6-12 hour restore |  RTO gap — exceeds target under major failure |
+| PACS | Critical | 4 hours | 1 hour | Veeam backup — estimated 4-8 hour restore |  RTO gap possible under major failure |
+| Laboratory Information System | Critical | 8 hours | 2 hours | Veeam backup — estimated 4-6 hour restore |  Likely achievable |
+| Pharmacy Management System | Critical | 4 hours | 1 hour | Veeam backup — estimated 4-8 hour restore |  RTO gap possible |
+| Active Directory | Critical | 2 hours | 1 hour | Veeam backup — DC replication provides partial redundancy | RTO gap under site-wide failure |
+| Microsoft 365 | High | 8 hours | 4 hours | Microsoft cloud resilience — generally high availability |  Achievable — Microsoft SLA |
+| Billing System | Moderate | 48 hours | 24 hours | Veeam backup — estimated 4-6 hour restore |  Achievable |
+| Patient Scheduling | Moderate | 24 hours | 4 hours | Cloud-hosted SaaS — provider DR applies |  Achievable — provider SLA |
+| AWS S3 Backup | High | N/A | N/A | AWS multi-region redundancy |  Highly available |
 
+
+
+**Continuity Strategies**
 ---
-
-## 6. Continuity Strategies
 
 <!-- 
 Continuity strategies are the specific plans TSHI activates
 when a disruption occurs. There are two types:
 1. Technology strategies — the IT actions to restore or maintain systems
 2. Operational strategies — what staff actually DO when systems are unavailable
-Both are required because technology restoration takes time,
-and clinical operations must continue during that time.
-The downtime procedures for clinical staff are arguably the most
-important continuity strategy in a hospital setting —
-they define exactly what happens at the bedside when the EHR goes down.
-Without documented, trained, and practiced downtime procedures,
-clinical staff improvise — which creates patient safety risk.
 -->
 
-### 6.1 Technology Continuity Strategies
+**Technology Continuity Strategies**
 
 | Strategy | Description | Applies To |
 |---|---|---|
@@ -192,19 +156,13 @@ clinical staff improvise — which creates patient safety risk.
 | **Active Directory Redundancy** | Multiple domain controllers provide partial redundancy for authentication services | Identity and access |
 | **Manual Downtime Mode** | Epic EHR supports a downtime mode allowing limited read-only access to recently cached patient data during outages | Epic EHR |
 
-### 6.2 Operational Continuity Strategies — Clinical Downtime Procedures
+**Operational Continuity Strategies — Clinical Downtime Procedures**
 
 <!-- 
 Clinical downtime procedures are what clinical staff do when the EHR goes down.
 In a real hospital these are physical binders kept at every nursing station
 that contain paper forms for medication administration records,
 patient assessments, physician orders, and lab requisitions.
-Staff are trained on these procedures annually
-because if they have never practiced them,
-they will not know what to do when the EHR goes down in the middle of the night.
-The training gap at TSHI is that downtime procedures exist
-but have not been fully documented, distributed, or practiced.
-This is a finding that will be addressed through the remediation plan.
 -->
 
 When clinical systems are unavailable, TSHI clinical staff activate the following downtime procedures:
@@ -229,20 +187,13 @@ When clinical systems are unavailable, TSHI clinical staff activate the followin
 | 5 | IT notifies Clinical Lead when systems are restored and ready for reconciliation | IT Director |
 | 6 | Clinical staff reconcile paper records into EHR upon system restoration | Clinical staff / Health Information Management |
 
----
 
-## 7. Backup and Recovery Requirements
+**Backup and Recovery Requirements**
+---
 
 <!-- 
 Backup requirements define exactly how data is backed up —
 how often, what is included, where it is stored, and how it is tested.
-The testing requirement is the most commonly neglected part.
-Organizations assume their backups work until they try to restore
-during a ransomware attack and discover the backups are corrupted,
-incomplete, or incompatible with the current system version.
-Discovering your backups do not work during a ransomware recovery
-is one of the worst possible situations in healthcare IT.
-Regular restoration testing eliminates this risk.
 -->
 
 | Requirement | Standard |
@@ -258,21 +209,20 @@ Regular restoration testing eliminates this risk.
 | Backup Monitoring | Backup jobs must be monitored daily — failed backups must be investigated and resolved within 24 hours |
 | Immutable Backups | At least one backup copy must be stored in an immutable format that cannot be encrypted or deleted by ransomware |
 
+
+
+**BC Plan Testing Requirements**
 ---
 
-## 8. BC Plan Testing Requirements
-
-<!-- 
-A BC plan that has never been tested is a theory, not a capability.
+<!-- .
 Testing reveals gaps between what the plan says will happen
 and what actually happens when people try to follow it under pressure.
+
 There are different types of tests with increasing levels of realism and disruption:
 Tabletop — discussion based, no systems affected, lowest cost and disruption
 Walkthrough — staff walk through procedures step by step without activating them
 Simulation — partial activation of procedures in a controlled environment
 Full test — complete activation including actual system failover
-Healthcare organizations must balance testing thoroughness
-against the risk of disrupting patient care during the test.
 -->
 
 | Test Type | Description | Frequency | Participants |
@@ -292,9 +242,10 @@ against the risk of disrupting patient care during the test.
 | Plan Updates | BC plan must be updated based on test findings within 60 days of each exercise |
 | Retention | All test documentation must be retained for a minimum of six years |
 
----
 
-## 9. Plan Maintenance
+
+**Plan Maintenance**
+---
 
 | Trigger | Required Action |
 |---|---|
@@ -304,9 +255,10 @@ against the risk of disrupting patient care during the test.
 | Significant organizational change | Review and update when new facilities, systems, or major organizational changes occur |
 | Regulatory change | Review and update when applicable regulations change |
 
----
 
-## 10. Related Documents
+
+**Related Documents**
+---
 
 | Document | Path |
 |---|---|
