@@ -1,15 +1,18 @@
 <!-- 
-WHAT IS THIS FILE?
-This is TSHI's Incident Response Policy — the formal document that governs
-how TSHI prepares for, detects, responds to, and recovers from security incidents.
+This is TSHI's Incident Response Policy its a document that governs
+the method in which TSHI prepares for, detects, responds to, and recovers from security incidents.
+
 An incident response policy is required under HIPAA Security Rule
-45 CFR § 164.308(a)(6) — Security Incident Procedures.
+45 CFR § 164.308(a)(6) Security Incident Procedures.
+
 HIPAA requires covered entities to implement policies and procedures
 to address security incidents — including how to identify, respond to,
 and document incidents involving ePHI.
+
 The gap identified in the risk assessment was that TSHI has a basic IR plan
 but it has never been tested — meaning staff do not know their roles
 and the plan may not work in a real incident.
+
 This policy formalizes the program that the plan operates under.
 Think of the difference this way:
 The POLICY defines the rules, roles, and requirements — it is permanent.
@@ -17,24 +20,24 @@ The PLAN (procedures) defines the step-by-step actions — it is operational.
 Both are needed. One without the other leaves gaps.
 -->
 
-# Incident Response Policy — Tri-State Health Initiative (TSHI)
+# Incident Response Policy — Tri-State Health Initiative
 
-**Document ID:** TSHI-POL-IR-001
-**Version:** 1.0
-**Classification:** Internal Use Only
-**Effective Date:** August 2026
-**Review Date:** August 2027
-**Owner:** Chief Information Security Officer (CISO)
-**Approved By:** Chief Executive Officer (CEO)
+**Document ID: TSHI-POL-IR-001
+Version: 1.0
+Classification: Internal Use Only
+Effective Date: August 2026
+Review Date: August 2027
+Owner: Chief Information Security Officer (CISO)
+Approved By: Chief Executive Officer (CEO)**
 
+
+**Purpose**
 ---
-
-## 1. Purpose
 
 <!-- 
 A security incident is any event that threatens the confidentiality,
 integrity, or availability of TSHI's information systems or data.
-In healthcare this has a direct patient safety dimension —
+In healthcare this has a direct patient safety dimension
 a ransomware attack that takes down the EHR is not just an IT problem,
 it is a clinical emergency.
 Having a defined, practiced, and documented incident response capability
@@ -50,9 +53,7 @@ This policy supports compliance with:
 - NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide
 - NIST Cybersecurity Framework 2.0 — Respond and Recover Functions
 
----
-
-## 2. Scope
+**Scope**
 
 This policy applies to all security incidents affecting TSHI information systems, data, and operations regardless of cause, location, or the party responsible for detection.
 
@@ -64,9 +65,8 @@ This policy applies to all security incidents affecting TSHI information systems
 | Third-party incidents | Vendor breaches affecting TSHI data or systems |
 | Non-adversarial incidents | Accidental data deletion, system misconfigurations causing data exposure |
 
----
 
-## 3. Incident Definition and Classification
+**Incident Definition and Classification**
 
 <!-- 
 Not every security event is an incident.
@@ -83,7 +83,8 @@ A P4 low-risk email phishing attempt that was caught by the filter
 can be logged and reviewed during normal business hours.
 -->
 
-### 3.1 Security Event vs Security Incident
+**Security Event vs Security Incident**
+---
 
 | Term | Definition |
 |---|---|
@@ -91,7 +92,8 @@ can be logged and reviewed during normal business hours.
 | **Security Incident** | An event that actually or potentially jeopardizes the confidentiality, integrity, or availability of TSHI information systems or data |
 | **Privacy Breach** | A specific type of incident involving actual or suspected unauthorized access, use, or disclosure of ePHI |
 
-### 3.2 Incident Severity Classification
+**Incident Severity Classification**
+---
 
 | Severity | Classification | Definition | Response Time | Notification Required |
 |---|---|---|---|---|
@@ -100,9 +102,10 @@ can be logged and reviewed during normal business hours.
 | **P3 — Moderate** | Limited impact | Malware detected and contained, suspected phishing attempt, single system outage, limited data exposure | Within 24 hours | CISO, IT Director |
 | **P4 — Low** | Minimal impact | Blocked phishing email, failed login attempts, minor policy violation, security event requiring investigation | Within 72 hours | IT Security Team |
 
----
 
-## 4. Incident Response Team
+
+**Incident Response Team**
+---
 
 <!-- 
 The Computer Security Incident Response Team (CSIRT) is the group
@@ -118,7 +121,8 @@ Think of it like a fire department — the fire chief has command authority
 at the scene even if the building owner is present.
 -->
 
-### 4.1 CSIRT Roles and Responsibilities
+**CSIRT Roles and Responsibilities**
+---
 
 | Role | Title | Responsibilities |
 |---|---|---|
@@ -141,9 +145,9 @@ at the scene even if the building owner is present.
 | HHS Office for Civil Rights | Regulatory notification and investigation | All confirmed ePHI breaches meeting HIPAA notification thresholds |
 | State Attorney General (NJ / NY) | State breach notification | Breaches affecting NJ or NY residents |
 
----
 
-## 5. Incident Response Phases
+**Incident Response Phases**
+---
 
 <!-- 
 NIST SP 800-61 defines the incident response lifecycle in four phases.
@@ -294,9 +298,10 @@ How did we respond? What worked? What did not? What do we change?
 | Control Implementation | Implement any new controls or remediation actions identified during the review | Per remediation timeline |
 | Documentation Retention | Retain all incident documentation for a minimum of six years per HIPAA requirements | Ongoing |
 
----
 
-## 6. HIPAA Breach Notification Requirements
+
+**HIPAA Breach Notification Requirements**
+---
 
 <!-- 
 When a security incident involves unauthorized access to unsecured ePHI,
@@ -314,7 +319,8 @@ the safe harbor provision may apply and notification may not be required.
 This is why encrypting ePHI is so strategically important.
 -->
 
-### 6.1 Breach Determination
+**6.1 Breach Determination**
+---
 
 Upon discovery of a potential ePHI breach, TSHI must conduct a four-factor risk assessment to determine if notification is required:
 
@@ -327,7 +333,7 @@ Upon discovery of a potential ePHI breach, TSHI must conduct a four-factor risk 
 
 If the risk assessment cannot demonstrate a low probability that ePHI was compromised, the incident is presumed to be a breach and notification is required.
 
-### 6.2 Breach Notification Timeline
+**Breach Notification Timeline**
 
 | Notification Target | Timeline | Responsible Party |
 |---|---|---|
@@ -337,9 +343,10 @@ If the risk assessment cannot demonstrate a low probability that ePHI was compro
 | NJ Division of Consumer Affairs | Most expedient time possible — NJ Identity Theft Prevention Act | Compliance Officer / Legal |
 | NY Attorney General | Most expedient time possible — NY SHIELD Act | Compliance Officer / Legal |
 
----
 
-## 7. Evidence Handling and Chain of Custody
+
+**Evidence Handling and Chain of Custody**
+---
 
 <!-- 
 Evidence handling is critical for two reasons:
@@ -362,17 +369,18 @@ This is a standard requirement in any legal or regulatory proceeding.
 | Legal Hold | Place a legal hold on all documentation related to the incident — suspend normal data destruction schedules |
 | Forensic Imaging | Create forensic images of affected systems using approved tools before any remediation is performed |
 
----
 
-## 8. Related Documents
+
+**Related Documents**
+---
 
 | Document | Path |
 |---|---|
-| Risk Assessment Policy | [../Docs/Risk_Assessment_Policy.md](../Docs/Risk_Assessment_Policy.md) |
-| Access Control Policy | [Access_Control_Policy.md](Access_Control_Policy.md) |
-| Business Continuity Policy | [Business_Continuity_Policy.md](Business_Continuity_Policy.md) |
-| Risk Register | [../Risk/Risk_Register.md](../Risk/Risk_Register.md) |
-| Compliance Matrix | [../Matrices/Compliance_Matrix.md](../Matrices/Compliance_Matrix.md) |
+| Risk Assessment Policy | [Risk Assessment Policy](../Docs/Risk_Assessment_Policy.md) |
+| Access Control Policy | [Access Control Policy](Access_Control_Policy.md) |
+| Business Continuity Policy | [Business Continuity Policy](Business_Continuity_Policy.md) |
+| Risk Register | [Risk Register](../Risk/Risk_Register.md) |
+| Compliance Matrix | [Compliance Matrix](../Matrices/Compliance_Matrix.md) |
 
 ---
 
