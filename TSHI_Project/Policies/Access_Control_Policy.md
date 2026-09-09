@@ -1,56 +1,45 @@
 <!-- 
-WHAT IS THIS FILE?
-This is TSHI's Access Control Policy — the formal document that governs
-how access to systems and data is granted, managed, and revoked.
-Access control is one of the most fundamental security concepts
-and one of the most heavily scrutinized areas in a HIPAA audit.
-The HIPAA Security Rule requires access controls under both
-Administrative Safeguards (164.308(a)(3) and 164.308(a)(4))
-and Technical Safeguards (164.312(a)(1)).
-This policy directly addresses several of the gaps identified
-in the risk assessment — particularly the lack of formal access reviews,
+Access Control Policy, explains how access to systems are granted, managed, revoked. 
+
+This policy directly addresses several of the gaps 
+in the risk assessment particularly the lack of formal access reviews,
 inconsistent offboarding, and the absence of MFA on the EHR system.
-In a real organization this policy would be reviewed and approved
-by the CISO and signed by executive leadership before being distributed.
 Policies without executive approval lack organizational authority
 and may not be enforceable.
 -->
 
 # Access Control Policy — Tri-State Health Initiative (TSHI)
 
-**Document ID:** TSHI-POL-AC-001
-**Version:** 1.0
-**Classification:** Internal Use Only
-**Effective Date:** August 2026
-**Review Date:** August 2027
-**Owner:** Chief Information Security Officer (CISO)
-**Approved By:** Chief Executive Officer (CEO)
+**Document ID: TSHI-POL-AC-001
+Version: 1.0
+Classification: Internal Use Only
+Effective Date: August 2026
+Review Date: August 2027
+Owner: Chief Information Security Officer (CISO)
+Approved By: Chief Executive Officer (CEO)**
 
+
+**Purpose**
 ---
-
-## 1. Purpose
 
 <!-- 
 The purpose statement answers: why does this policy exist?
 Access control policy exists because not everyone in an organization
 should have access to everything.
-The principle of least privilege — one of the most important concepts
-in information security — says that users should have only the access
-they need to do their job and nothing more.
-This reduces the damage an attacker can do with a compromised account
-and limits the harm an insider can cause intentionally or accidentally.
+
+Important concept: The principle of least privilege 
 -->
 
-The purpose of this policy is to establish the requirements for controlling access to Tri-State Health Initiative (TSHI) information systems, applications, and data. This policy ensures that access to electronic Protected Health Information (ePHI) and other sensitive organizational data is granted based on legitimate business need, managed throughout the user lifecycle, and revoked promptly when no longer required.
+The purpose of this policy is to establish the requirements for controlling access to Tri-State Health Initiative information systems, applications, and data. This policy ensures that access to electronic Protected Health Information and other sensitive organizational data is granted based on legitimate business need, managed throughout the user lifecycle, and revoked promptly when no longer required.
 
 This policy supports compliance with:
 - HIPAA Security Rule — 45 CFR § 164.308(a)(3), 164.308(a)(4), 164.312(a)(1)
 - NIST SP 800-53 Rev. 5 — Access Control (AC) Control Family
 - NIST Cybersecurity Framework 2.0 — Protect Function
 
----
 
-## 2. Scope
+**Scope**
+---
 
 This policy applies to:
 
@@ -61,19 +50,17 @@ This policy applies to:
 | All data classifications | Systems containing ePHI, PII, Confidential, and Internal data |
 | All access methods | On-site, remote, and third-party vendor access |
 
----
 
-## 3. Access Control Principles
+**Access Control Principles**
+---
 
 <!-- 
 These four principles are the foundation of access control.
-They are referenced throughout the policy and should be understood cold.
+
 Least Privilege — only the access needed for the job, nothing more
 Need to Know — even within an authorized role, access is limited to specific data needed
 Separation of Duties — no single person controls an entire critical process
 Account Lifecycle Management — access is actively managed from creation to termination
-These principles appear constantly in security certifications,
-job interviews, and real-world security work.
 -->
 
 All access control decisions at TSHI are governed by the following core principles:
@@ -85,23 +72,20 @@ All access control decisions at TSHI are governed by the following core principl
 | **Separation of Duties** | No single individual controls an entire critical process end-to-end | System administrators cannot both approve and implement their own changes |
 | **Account Lifecycle Management** | Access rights are actively managed from initial provisioning through modification to termination | All access changes follow a documented provisioning and deprovisioning process |
 
+
+**User Account Management**
 ---
 
-## 4. User Account Management
-
 <!-- 
-User account management covers the full lifecycle of a user account —
-from creation when someone joins the organization
-to modification when their role changes
-to termination when they leave.
-Each phase has specific requirements that must be followed
-to ensure access is appropriate at every point in the lifecycle.
-The most critical phase from a security perspective is termination —
-former employee accounts that remain active are a known attack vector
-and a HIPAA compliance issue.
+User account management of a user account which follows the creation, modification, and termination.
+
+Each of the step of the cycle has specific requirements that governs its phase, 
+Termination is a huge priority due the fact that it can become an attack vector 
+and a compliance issue. 
 -->
 
-### 4.1 Account Provisioning
+**Account Provisioning**
+---
 
 | Requirement | Description |
 |---|---|
@@ -111,7 +95,8 @@ and a HIPAA compliance issue.
 | Documentation | All provisioning requests must be documented and retained for a minimum of six years in accordance with HIPAA retention requirements |
 | Unique Accounts | All users must be assigned unique individual accounts — shared accounts are prohibited except for emergency access accounts specifically designated for that purpose |
 
-### 4.2 Account Modification
+**Account Modification**
+---
 
 | Requirement | Description |
 |---|---|
@@ -119,17 +104,14 @@ and a HIPAA compliance issue.
 | Access Escalation | Requests for access beyond standard role permissions require written approval from the department head and CISO |
 | Temporary Access | Temporary access grants must specify an expiration date and be automatically revoked upon expiration |
 
-### 4.3 Account Termination
+**Account Termination**
+---
 
 <!-- 
 This section is one of the most important in the entire policy
 because terminated employee accounts are one of the most exploited
 vulnerabilities in real-world breaches.
-An ex-employee who knows their credentials still work
-can cause significant damage — and they already know the systems.
-The 24-hour requirement for voluntary terminations
-and immediate requirement for involuntary terminations
-reflect real industry best practices.
+
 Involuntary terminations (firings) are treated differently
 because a disgruntled employee who knows they are being fired
 has both the motive and the window to cause harm
@@ -144,6 +126,7 @@ if access is not cut immediately.
 | Role Transfer | Access associated with the previous role must be revoked within 5 business days of role change |
 
 **Termination Checklist — IT Responsibilities:**
+---
 
 | Action | Responsible Party | Timeline |
 |---|---|---|
@@ -156,14 +139,18 @@ if access is not cut immediately.
 | Review and transfer data ownership | IT / Department Manager | Within 5 business days |
 | Document completion in HR system | HR | Within 5 business days |
 
-### 4.4 Privileged Accounts
+**Privileged Accounts**
+---
 
 <!-- 
-Privileged accounts are accounts with elevated permissions —
+Privileged accounts are accounts with higher permissions those being
 system administrators, database administrators, network engineers.
+
 These accounts are the highest-value targets in any network
 because compromising one gives an attacker broad access
 to systems and the ability to cover their tracks.
+
+Stronger controls are required for privileged accounts
 Privileged accounts require stronger controls than standard user accounts
 because the consequences of compromise are much more severe.
 The use of separate privileged accounts (not using the same account
@@ -180,23 +167,17 @@ principle of privileged access management.
 | Just-In-Time Access | Where technically feasible privileged access should be granted on a just-in-time basis and automatically revoked after the task is complete |
 | Annual Review | All privileged accounts must be reviewed and reauthorized annually by the CISO |
 
+
+**Authentication Requirements**
 ---
 
-## 5. Authentication Requirements
-
 <!-- 
-Authentication is the process of verifying that a user is who they claim to be.
-This section defines the minimum authentication standards for all TSHI systems.
-The most important requirement here is MFA — multi-factor authentication.
-MFA is the single most effective control against credential-based attacks
-because even if an attacker steals a password,
-they cannot authenticate without the second factor.
-Microsoft reports that MFA blocks over 99% of automated credential attacks.
-The fact that TSHI does not have MFA on the EHR is the most critical
-technical gap identified in this entire assessment.
+Establishing the rules of passwords such as the necessary length minimum, complexity,
+and other topic what secure the layer of defence for the users
 -->
 
-### 5.1 Password Requirements
+**Password Requirements**
+---
 
 | Requirement | Standard |
 |---|---|
@@ -207,19 +188,13 @@ technical gap identified in this entire assessment.
 | Account Lockout | Account must be locked after 5 consecutive failed login attempts; lockout duration minimum 15 minutes |
 | Prohibited Passwords | Common passwords, dictionary words, and passwords containing the user's name or username are prohibited |
 
-### 5.2 Multi-Factor Authentication Requirements
+**Multi-Factor Authentication Requirements**
 
 <!-- 
-MFA combines two or more authentication factors from different categories:
-Something you know (password, PIN)
-Something you have (hardware token, smartphone app, smart card)
-Something you are (fingerprint, face scan, retina)
-Requiring two factors from different categories means an attacker
-needs to compromise both — significantly harder than stealing one password.
-The phased rollout approach here is realistic —
-deploying MFA to all 1,200 users simultaneously is operationally complex.
-Prioritizing the highest-risk access points first (EHR, admin accounts, VPN)
-is the right security strategy.
+Multi factor authentication, combines two are more points of approvement such as
+Password, and PIN; something of you know. 
+Something you have would include an application that the user has download, or a authentication card
+Something you are comprises of biometrics 
 -->
 
 MFA is required for the following access points — phased implementation based on risk priority:
@@ -234,28 +209,23 @@ Acceptable MFA methods at TSHI:
 
 | MFA Method | Acceptable | Notes |
 |---|---|---|
-| Authenticator App (TOTP) | ✅ Yes | Preferred method — Microsoft Authenticator or equivalent |
-| Hardware Security Key | ✅ Yes | Recommended for privileged accounts |
-| SMS One-Time Password | ⚠️ Conditional | Acceptable as secondary option — not preferred due to SIM-swap risk |
-| Email One-Time Password | ❌ No | Not acceptable — email account may itself be compromised |
-| Security Questions | ❌ No | Not acceptable — does not constitute a true second factor |
+| Authenticator App (TOTP) | Yes | Preferred method — Microsoft Authenticator or equivalent |
+| Hardware Security Key | Yes | Recommended for privileged accounts |
+| SMS One-Time Password | Conditional | Acceptable as secondary option — not preferred due to SIM-swap risk |
+| Email One-Time Password | No | Not acceptable — email account may itself be compromised |
+| Security Questions | No | Not acceptable — does not constitute a true second factor |
 
+
+
+**Access Reviews**
 ---
-
-## 6. Access Reviews
 
 <!-- 
 Access reviews are periodic audits of who has access to what
 to ensure that access rights remain appropriate over time.
-Without regular access reviews organizations accumulate
-"access creep" — users accumulate permissions over time
-as roles change but old access is never removed.
-A user who started in billing, moved to clinical, and then became a manager
-might still have billing system access, clinical records access,
-AND manager-level admin rights — far more than any one role needs.
-Access reviews catch and correct this.
-HIPAA requires periodic evaluation of access rights
-under the Workforce Security and Information Access Management standards.
+
+Without regular audit "access creeps" can overstay their permission and use
+them for unintended purposes 
 -->
 
 | Review Type | Scope | Frequency | Responsible Party |
@@ -279,15 +249,15 @@ Step 5: Document completion and retain records for 6 years
 
 ---
 
-## 7. Remote Access
+**Remote Access**
+---
 
 <!-- 
-Remote access — accessing TSHI systems from outside the network —
+Remote access means accessing TSHI systems from outside the network —
 introduces additional risk because traffic travels over untrusted networks.
-The COVID-19 pandemic dramatically accelerated remote work in healthcare,
-and with it, the attack surface for credential theft and VPN exploitation.
-TSHI uses Cisco AnyConnect VPN for remote access —
-this is appropriate but must be combined with MFA
+
+TSHI uses Cisco AnyConnect VPN for remote access 
+this is must be combined with MFA
 which is currently only partially deployed.
 -->
 
@@ -299,21 +269,15 @@ which is currently only partially deployed.
 | No Split Tunneling | VPN must be configured to route all traffic through the TSHI network — split tunneling that allows simultaneous internet browsing is prohibited |
 | Session Logging | All remote access sessions must be logged including user identity, duration, and systems accessed |
 
----
 
-## 8. Third-Party and Vendor Access
+**Third-Party and Vendor Access**
+---
 
 <!-- 
 Vendors often need remote access to TSHI systems to provide support.
-This is legitimate and necessary — but it must be controlled.
-Unmonitored vendor access is a primary supply chain attack vector.
-The attacker in the 2013 Target breach gained initial access
-through credentials stolen from an HVAC vendor.
-Healthcare has seen similar attacks where EHR vendor access
-was used as a pathway into hospital networks.
-Just-in-time access — granting access only when needed
-and automatically revoking it afterward — is the gold standard
-for vendor access management.
+This is legitimate and necessary but it must be controlled.
+
+An unmonitored vendor access is a primary supply chain attack vector.
 -->
 
 | Requirement | Description |
@@ -325,9 +289,10 @@ for vendor access management.
 | Time-Limited Access | Vendor access must be granted for a defined period and automatically expire — standing permanent access is prohibited except where operationally required with CISO approval |
 | Business Associate Agreement | All vendors with access to systems containing ePHI must have a signed BAA on file prior to access being granted |
 
----
 
-## 9. Policy Violations
+
+**Policy Violations**
+---
 
 | Violation | Consequence |
 |---|---|
@@ -337,17 +302,18 @@ for vendor access management.
 | Circumventing MFA or access controls | Disciplinary action up to and including termination; potential criminal referral |
 | Vendor providing access to unauthorized parties | Immediate termination of vendor contract and BAA; potential legal action |
 
----
 
-## 10. Related Documents
+
+**Related Documents**
+---
 
 | Document | Path |
 |---|---|
-| Risk Assessment Policy | [../Docs/Risk_Assessment_Policy.md](../Docs/Risk_Assessment_Policy.md) |
-| Data Classification Policy | [Data_Classification_Policy.md](Data_Classification_Policy.md) |
-| Incident Response Policy | [Incident_Response_Policy.md](Incident_Response_Policy.md) |
-| RACI Matrix | [../Annexes/Annex_A_RACI_Matrix.md](../Annexes/Annex_A_RACI_Matrix.md) |
-| Compliance Matrix | [../Matrices/Compliance_Matrix.md](../Matrices/Compliance_Matrix.md) |
+| Risk Assessment Policy | [Risk Assessment Policy](../Docs/Risk_Assessment_Policy.md) |
+| Data Classification Policy | [Data Classification Policy](Data_Classification_Policy.md) |
+| Incident Response Policy | [Incident Response Policy](Incident_Response_Policy.md) |
+| RACI Matrix | [Annex A RACI Matrix](../Annexes/Annex_A_RACI_Matrix.md) |
+| Compliance Matrix | [Compliance Matrix](../Matrices/Compliance_Matrix.md) |
 
 ---
 
