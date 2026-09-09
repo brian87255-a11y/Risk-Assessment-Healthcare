@@ -20,15 +20,15 @@ but it does require that ePHI be identified and appropriately protected —
 this policy is how TSHI fulfills that obligation.
 -->
 
-# Data Classification Policy — Tri-State Health Initiative (TSHI)
+# Data Classification Policy — Tri-State Health Initiative 
 
-**Document ID:** TSHI-POL-DC-001
-**Version:** 1.0
-**Classification:** Internal Use Only
-**Effective Date:** August 2026
-**Review Date:** August 2027
-**Owner:** Chief Information Security Officer (CISO)
-**Approved By:** Chief Executive Officer (CEO)
+**Document ID: TSHI-POL-DC-001
+Version: 1.0
+Classification: Internal Use Only
+Effective Date: August 2026
+Review Date: August 2027
+Owner: Chief Information Security Officer (CISO)
+Approved By: Chief Executive Officer (CEO)**
 
 ---
 
