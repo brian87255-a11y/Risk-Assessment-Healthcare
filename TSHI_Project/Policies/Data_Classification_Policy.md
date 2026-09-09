@@ -1,18 +1,21 @@
 <!-- 
-WHAT IS THIS FILE?
-This is TSHI's Data Classification Policy — the formal document that defines
+Classification Policy the formal document that defines
 how TSHI categorizes its data based on sensitivity and the handling
 requirements that apply to each category.
+
 Data classification is foundational to security because it answers
 the question: how much protection does this data need?
-Not all data is equally sensitive — a published press release and
+
+Not all data is equally sensitive a published press release and
 a patient's psychiatric records should not be protected the same way.
+
 Classification allows TSHI to apply the right level of security
 to the right data rather than either over-protecting everything
 (expensive and operationally impractical) or under-protecting everything
 (a compliance and security disaster).
+
 The gap identified in the risk assessment was that TSHI has a data
-classification policy in draft form that is not consistently enforced —
+classification policy in draft form that is not consistently enforced
 staff may handle sensitive data without appropriate care.
 This policy formalizes and operationalizes that classification.
 HIPAA does not mandate a specific classification scheme
@@ -30,19 +33,13 @@ Review Date: August 2027
 Owner: Chief Information Security Officer (CISO)
 Approved By: Chief Executive Officer (CEO)**
 
----
 
-## 1. Purpose
+**Purpose**
+---
 
 <!-- 
 The purpose of data classification is to ensure that the right protections
-are applied to the right data — not too much, not too little.
-In healthcare this is especially important because ePHI requires
-specific protections under HIPAA that other data types do not.
-Having a clear classification policy also helps employees understand
-how to handle the data they work with every day —
-"is this something I can email to a vendor?" becomes answerable
-once you know what classification the data falls into.
+are applied to the right data
 -->
 
 This policy establishes TSHI's data classification framework — defining categories of data based on sensitivity, the handling requirements that apply to each category, and the roles responsible for classification and compliance.
@@ -60,15 +57,16 @@ This policy supports compliance with:
 - New Jersey Identity Theft Prevention Act
 - New York SHIELD Act
 
----
 
-## 2. Scope
+**Scope**
+---
 
 This policy applies to all data created, received, maintained, transmitted, or stored by TSHI regardless of format or medium — including electronic files, physical documents, verbal communications, and data held by third-party vendors on TSHI's behalf.
 
----
 
-## 3. Data Roles and Responsibilities
+
+**Data Roles and Responsibilities**
+---
 
 <!-- 
 Data roles define who is responsible for what when it comes to data.
@@ -105,9 +103,10 @@ they implement the technical controls to enforce that decision.
 | Network and System Configuration | IT Director | IT Infrastructure Team |
 | Research and Operational Data | Department Heads | IT Director |
 
----
 
-## 4. Data Classification Levels
+
+**Data Classification Levels**
+---
 
 <!-- 
 TSHI uses four classification levels — Critical, Confidential, Internal, and Public.
@@ -204,9 +203,9 @@ is fundamental for anyone working in healthcare security.
 | Accuracy | Must be accurate and current — outdated public information must be removed or corrected |
 | No Embedding | Public materials must not embed or reference Critical or Confidential data |
 
----
 
-## 5. Special Data Categories
+**Special Data Categories**
+---
 
 <!-- 
 Some types of ePHI receive additional protections beyond standard HIPAA requirements.
@@ -233,9 +232,9 @@ Certain categories of ePHI receive heightened protection beyond standard Critica
 | Minor Patient Records | HIPAA + NJ/NY state law | Parents' rights to access minor records vary by age and situation |
 | Psychotherapy Notes | HIPAA Privacy Rule | Requires separate authorization from general medical record release |
 
----
 
-## 6. Data Classification in Practice
+**Data Classification in Practice**
+---
 
 <!-- 
 Knowing classifications exist is not enough — staff need to know
@@ -247,7 +246,8 @@ than you think it might be. It is better to over-protect
 than to under-protect and cause a breach.
 -->
 
-### 6.1 How to Classify Data
+**How to Classify Data**
+---
 
 ```
 Step 1: Identify what type of information the data contains
@@ -266,7 +266,8 @@ Step 4: Apply the handling requirements for that classification level
         → Storage, transmission, access, sharing, disposal
 ```
 
-### 6.2 Common Scenarios
+**Common Scenarios**
+---
 
 | Scenario | Correct Classification | Rationale |
 |---|---|---|
@@ -279,9 +280,8 @@ Step 4: Apply the handling requirements for that classification level
 | Vendor contract containing pricing | Confidential | Sensitive business data — not for external distribution |
 | Patient discharge instructions | Critical | Contains ePHI — treatment information |
 
+**Data Handling During Incidents**
 ---
-
-## 7. Data Handling During Incidents
 
 | Situation | Required Action |
 |---|---|
@@ -290,9 +290,10 @@ Step 4: Apply the handling requirements for that classification level
 | Discovery of Critical data in an unsecured location | Secure the data immediately — report to CISO for breach assessment |
 | Vendor requesting data beyond their BAA scope | Deny the request — escalate to CISO and Legal |
 
----
 
-## 8. Training and Awareness
+
+**Training and Awareness**
+---
 
 | Requirement | Details |
 |---|---|
@@ -301,9 +302,9 @@ Step 4: Apply the handling requirements for that classification level
 | Role-Specific Training | Clinical staff, IT staff, and administrative staff receive role-specific training on handling data relevant to their work |
 | Acknowledgment | All workforce members must sign an annual acknowledgment confirming they have read, understood, and will comply with this policy |
 
----
 
-## 9. Policy Violations
+**Policy Violations**
+---
 
 | Violation | Consequence |
 |---|---|
@@ -313,17 +314,18 @@ Step 4: Apply the handling requirements for that classification level
 | Failure to report a known or suspected data exposure | Disciplinary action up to and including termination |
 | Deliberate misclassification of data to bypass controls | Disciplinary action up to and including termination |
 
----
 
-## 10. Related Documents
+
+**Related Documents**
+---
 
 | Document | Path |
 |---|---|
-| Access Control Policy | [Access_Control_Policy.md](Access_Control_Policy.md) |
-| Incident Response Policy | [Incident_Response_Policy.md](Incident_Response_Policy.md) |
-| Regulatory Framework | [../Organization/Regulatory_Framework.md](../Organization/Regulatory_Framework.md) |
-| Asset Inventory | [../Risk/Asset_Inventory.md](../Risk/Asset_Inventory.md) |
-| Compliance Matrix | [../Matrices/Compliance_Matrix.md](../Matrices/Compliance_Matrix.md) |
+| Access Control Policy | [Access Control Policy](Access_Control_Policy.md) |
+| Incident Response Policy | [Incident Response Policy](Incident_Response_Policy.md) |
+| Regulatory Framework | [Regulatory Framework](../Organization/Regulatory_Framework.md) |
+| Asset Inventory | [Asset Inventory](../Risk/Asset_Inventory.md) |
+| Compliance Matrix | [Compliance Matrix](../Matrices/Compliance_Matrix.md) |
 
 ---
 
