@@ -26,7 +26,7 @@ without understanding how the network is structured.
 **Last Updated:** August 2026
 **Owner:** IT Director
 
-> ⚠️ **Security Notice:** This document contains sensitive network architecture information. Distribution is restricted to authorized IT and security personnel only. Do not share externally without CISO approval.
+>  **Security Notice:** This document contains sensitive network architecture information. Distribution is restricted to authorized IT and security personnel only. Do not share externally without CISO approval.
 
 ---
 
@@ -365,7 +365,8 @@ LEGEND:
 
 ---
 
-## 9. Diagram Maintenance
+**Diagram Maintenance**
+---
 
 | Requirement | Standard |
 |---|---|
@@ -374,17 +375,17 @@ LEGEND:
 | Version control | All diagram changes must be version controlled with date and description of change |
 | Distribution | Restricted to IT and security staff — CISO approval required for external distribution |
 
----
 
-## 10. Related Documents
+**Related Documents**
+---
 
 | Document | Path |
 |---|---|
-| IT Environment | [../Organization/IT_Environment.md](../Organization/IT_Environment.md) |
-| Asset Inventory | [../Risk/Asset_Inventory.md](../Risk/Asset_Inventory.md) |
-| Vulnerability Identification | [../Risk/Vulnerability_Identification.md](../Risk/Vulnerability_Identification.md) |
-| Risk Register | [../Risk/Risk_Register.md](../Risk/Risk_Register.md) |
+| IT Environment | [IT Environment](../Organization/IT_Environment.md) |
+| Asset Inventory | [Asset Inventory](../Risk/Asset_Inventory.md) |
+| Vulnerability Identification | [Vulnerability Identification](../Risk/Vulnerability_Identification.md) |
+| Risk Register | [Risk Register](../Risk/Risk_Register.md) |
 
----
+
 
 *Document ID: TSHI-DIAG-NET-001 | Version: 1.0 | Classification: Internal Use Only — Confidential | Case Study — Tri-State Health Initiative (TSHI)*
