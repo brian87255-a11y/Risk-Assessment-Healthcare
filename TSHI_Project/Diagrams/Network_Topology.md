@@ -57,7 +57,7 @@ TSHI operates a **hub-and-spoke network** with the main hospital campus in Newar
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    INTERNET / PUBLIC CLOUD                       │
+│                    INTERNET / PUBLIC CLOUD                      │
 │              (Microsoft 365, AWS S3, SaaS Vendors)              │
 └───────────────────────────┬─────────────────────────────────────┘
                             │
@@ -80,17 +80,17 @@ TSHI operates a **hub-and-spoke network** with the main hospital campus in Newar
 │  │  NETWORK     │ │  NETWORK     │ │  DEVICE      │             │
 │  │  (VLAN 10)   │ │  (VLAN 20)   │ │  NETWORK     │             │
 │  │              │ │              │ │  (NOT FULLY  │             │
-│  │  EHR WS      │ │  Office WS   │ │  SEGMENTED)  │            │
-│  │  Thin Clients│ │  Admin Laptops│ │             │            │
-│  │  Clinical Tab│ │  Billing Sys │ │  Infusion    │            │
-│  └──────────────┘ └──────────────┘ │  Pumps       │            │
-│                                     │  Patient Mon.│            │
-│  ┌──────────────────────────────┐  │  Imaging Sys │            │
-│  │  GUEST / PATIENT Wi-Fi       │  └──────────────┘            │
+│  │  EHR WS      │ │  Office WS   │ │  SEGMENTED)  │             │
+│  │  Thin Clients│ │ Admin Laptops│ │              │             │
+│  │  Clinical Tab│ │  Billing Sys │ │  Infusion    │             │
+│  └──────────────┘ └──────────────┘ │  Pumps       │             │
+│                                    │  Patient Mon.│             │
+│  ┌──────────────────────────────┐  │  Imaging Sys │             │
+│  │  GUEST / PATIENT Wi-Fi       │  └──────────────┘             │
 │  │  (FULLY ISOLATED — VLAN 99)  │                               │
 │  │  No access to internal nets  │                               │
 │  └──────────────────────────────┘                               │
-│                                                                  │
+│                                                                 │
 └──────────────────────────┬──────────────────────────────────────┘
                            │
               ┌────────────┼────────────┐
@@ -108,7 +108,7 @@ TSHI operates a **hub-and-spoke network** with the main hospital campus in Newar
 │  Admin WS       │ │  Admin WS       │ │  Admin WS       │
 │  Medical Devices│ │  Medical Devices│ │  Medical Devices│
 │                 │ │                 │ │                 │
-│   Key Locks     │ │   Key Locks      │ │    Key Locks    │
+│   Key Locks     │ │   Key Locks     │ │   Key Locks     │
 │  No Badge Access│ │  No Badge Access│ │  No Badge Access│
 └─────────────────┘ └─────────────────┘ └─────────────────┘
 ```
@@ -245,7 +245,8 @@ REMOTE USER / VENDOR
 
 ---
 
-## 6. Cloud Architecture
+**Cloud Architecture**
+---
 
 <!-- 
 TSHI uses a hybrid cloud model — some workloads on-premise,
@@ -262,37 +263,37 @@ a dedicated private connection like MPLS.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                      CLOUD ENVIRONMENT                           │
-│                                                                  │
-│  ┌──────────────────────┐    ┌──────────────────────────────┐  │
-│  │   MICROSOFT AZURE    │    │        AWS                    │  │
-│  │                      │    │                               │  │
-│  │  Microsoft 365       │    │  S3 — Offsite Backup Storage  │  │
-│  │  - Exchange Online   │    │  (Encrypted backups from      │  │
-│  │  - SharePoint        │    │   on-premise Veeam)           │  │
-│  │  - Teams             │    │                               │  │
-│  │  - Epic Cloud Modules│    │     Configuration not         │  │
-│  │                      │    │     regularly audited         │  │
-│  │     MFA partially    │    └──────────────────────────────┘  │
-│  │     deployed         │                                        │
-│  └──────────────────────┘                                        │
-│                                                                  │
-│  ┌──────────────────────┐    ┌──────────────────────────────┐  │
-│  │  SaaS — Patient      │    │  SaaS — HRIS                  │  │
-│  │  Scheduling          │    │  (Employee Records, Payroll)  │  │
-│  │  (Telehealth also    │    │                               │  │
-│  │   SaaS)              │    │  MFA:    Enforced             │  │
-│  │  MFA:     Partial    │    └──────────────────────────────┘  │
-│  └──────────────────────┘                                        │
+│                      CLOUD ENVIRONMENT                          │
+│                                                                 │
+│  ┌──────────────────────┐    ┌──────────────────────────────┐   │
+│  │   MICROSOFT AZURE    │    │        AWS                   │   │
+│  │                      │    │                              │   │
+│  │  Microsoft 365       │    │  S3 — Offsite Backup Storage │   │
+│  │  - Exchange Online   │    │  (Encrypted backups from     │   │
+│  │  - SharePoint        │    │   on-premise Veeam)          │   │
+│  │  - Teams             │    │                              │   │
+│  │  - Epic Cloud Modules│    │     Configuration not        │   │
+│  │                      │    │     regularly audited        │   │
+│  │     MFA partially    │    └──────────────────────────────┘   │
+│  │     deployed         │                                       │
+│  └──────────────────────┘                                       │
+│                                                                 │
+│  ┌──────────────────────┐    ┌──────────────────────────────┐   │
+│  │  SaaS — Patient      │    │  SaaS — HRIS                 │   │
+│  │  Scheduling          │    │  (Employee Records, Payroll) │   │
+│  │  (Telehealth also    │    │                              │   │
+│  │   SaaS)              │    │  MFA:    Enforced            │   │
+│  │  MFA:     Partial    │    └──────────────────────────────┘   │
+│  └──────────────────────┘                                       │
 └─────────────────────────────────────────────────────────────────┘
           ▲                  ▲
           │ (Encrypted       │ (Encrypted
           │  HTTPS/TLS)      │  HTTPS/TLS)
           │                  │
 ┌─────────┴──────────────────┴──────────────────────┐
-│              TSHI INTERNAL NETWORK                  │
-│              (Main Campus + Clinics)                │
-└─────────────────────────────────────────────────────┘
+│              TSHI INTERNAL NETWORK                │
+│              (Main Campus + Clinics)              │
+└───────────────────────────────────────────────────┘
 ```
 
 
