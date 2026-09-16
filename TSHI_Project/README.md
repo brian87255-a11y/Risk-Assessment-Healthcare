@@ -68,7 +68,7 @@ healthcare-risk-assessment/
 # Author 
 
 Brian Rivera
-ISC2 Certified in Cybersecurity (CC)
+ISC2 Certified in Cybersecurity
 Information Technology Student — NJIT Honors College
 Aspiring Cybersecurity Analyst | Federal Sector Focus 
 
