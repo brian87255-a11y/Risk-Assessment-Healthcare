@@ -1,67 +1,49 @@
 <!-- 
-WHAT IS THIS FILE?
 This file documents TSHI's network topology — the physical and logical
 layout of how all systems, locations, and network segments connect.
-A network diagram is one of the most important documents in a security assessment
-because it gives the assessor and the reader a visual understanding
-of the attack surface — where data flows, where boundaries exist,
-and where the gaps are.
-In a real organization this would be a proper diagram created in
-Visio, Lucidchart, or draw.io and exported as an image or PDF.
-Since we are working in GitHub markdown, we use ASCII art diagrams
-combined with detailed written descriptions — this is a common and
-accepted approach for markdown-based security documentation.
-The topology documented here is derived from the IT Environment file
-and reflects the hub-and-spoke architecture described there.
-Understanding network topology is fundamental for any security role —
-you cannot identify network-based threats or recommend network controls
-without understanding how the network is structured.
+- helps accessor understand gaps in the network by visualizing the 
+topology
 -->
 
-# Network Topology — Tri-State Health Initiative (TSHI)
+# Network Topology — Tri-State Health Initiative
 
-**Document ID:** TSHI-DIAG-NET-001
-**Version:** 1.0
-**Classification:** Internal Use Only — Confidential
-**Last Updated:** August 2026
-**Owner:** IT Director
+**Document ID: TSHI-DIAG-NET-001
+Version: 1.0
+Classification: Internal Use Only — Confidential
+Last Updated: August 2026
+Owner: IT Director**
 
->  **Security Notice:** This document contains sensitive network architecture information. Distribution is restricted to authorized IT and security personnel only. Do not share externally without CISO approval.
-
+**Purpose**
 ---
 
-## 1. Purpose
-
 <!-- 
-The network topology document serves multiple purposes in the risk assessment:
-1. It provides context for understanding how threats can move laterally
-   through the network once an attacker gains initial access
-2. It identifies the boundaries between network segments
-   and where controls like firewalls and VLANs are implemented
-3. It shows where the gaps in segmentation exist —
-   for TSHI the primary gap is medical devices sharing the clinical network
-4. It supports the vulnerability and risk findings by showing
-   visually why certain risks are rated the way they are
-For example: TSHI-RISK-003 (medical device exploitation) is rated Critical
-in part because the diagram shows medical devices are NOT isolated
-from the clinical workstations that access the EHR —
-meaning a compromised infusion pump has a direct network path
-to the system containing 85,000 patient records.
+1. Helps provide context for possible avenues in which an attacker can possibly 
+use to a gain access 
+2. Identifies the defined boundaries between the segments with controls like VLANs and Firewalls 
+3. Reveals possible gaps in the segmentation 
+
+The example in the TSHI is the lack of isolation in the medical devices,
+which can lead to a medical device exploitation which is its reason that the crictically levels are high
 -->
 
 This document provides a high-level overview of TSHI's network architecture across all four facilities. It supports the risk assessment by illustrating the attack surface, network segmentation status, and connectivity between key systems and locations.
 
+
+**High-Level Network Overview**
 ---
 
-## 2. High-Level Network Overview
-
 <!-- 
-The hub-and-spoke model means all clinic traffic flows back
-to the main hospital campus before going anywhere else.
-This is efficient and allows centralized management —
-but it also means the main campus is a single point of failure.
-If the main campus data center goes down, all clinics lose access
-to centralized systems. This is part of why TSHI-RISK-010
+The hub and spoke model
+Pros: 
+1. Lower Cost 
+2. Better Control 
+3. Easy Expansion 
+Cons: 
+1. Single Point of Failure 
+2. Bottlenecks
+3. Indirect Travel; if there needs to be communication between two spokes then the information has to travel through the hub adding extra time and cost
+
+This is part of why TSHI-RISK-010
 (no secondary data center) is rated High.
 The MPLS circuits are dedicated private connections between locations —
 faster and more reliable than internet connections
@@ -83,23 +65,23 @@ TSHI operates a **hub-and-spoke network** with the main hospital campus in Newar
                             │
 ┌───────────────────────────▼─────────────────────────────────────┐
 │                  TSHI MAIN CAMPUS — NEWARK, NJ                  │
-│                                                                  │
+│                                                                 │
 │  ┌─────────────┐    ┌──────────────┐    ┌────────────────────┐  │
 │  │  PERIMETER  │    │  CORE NETWORK│    │   DATA CENTER      │  │
-│  │  FIREWALL   │───▶│  SWITCHES /  │───▶│  (On-Premise)      │  │
+│  │  FIREWALL   │───▶│  SWITCHES /  │───▶│  (On-Premise)     │  │
 │  │  (NGFW)     │    │  ROUTERS     │    │  - VMware (40 VMs) │  │
 │  └─────────────┘    └──────┬───────┘    │  - SAN Storage     │  │
 │                            │            │  - AD Controllers  │  │
 │              ┌─────────────┼──────────┐ │  - Veeam Backup    │  │
 │              │             │          │ └────────────────────┘  │
-│              ▼             ▼          ▼                          │
-│  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐            │
-│  │  CLINICAL    │ │  ADMIN       │ │  MEDICAL     │            │
-│  │  NETWORK     │ │  NETWORK     │ │  DEVICE      │            │
-│  │  (VLAN 10)   │ │  (VLAN 20)   │ │  NETWORK     │            │
-│  │              │ │              │ │  (NOT FULLY  │            │
+│              ▼             ▼          ▼                         │
+│  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐             │
+│  │  CLINICAL    │ │  ADMIN       │ │  MEDICAL     │             │
+│  │  NETWORK     │ │  NETWORK     │ │  DEVICE      │             │
+│  │  (VLAN 10)   │ │  (VLAN 20)   │ │  NETWORK     │             │
+│  │              │ │              │ │  (NOT FULLY  │             │
 │  │  EHR WS      │ │  Office WS   │ │  SEGMENTED)  │            │
-│  │  Thin Clients│ │  Admin Laptops│ │              │            │
+│  │  Thin Clients│ │  Admin Laptops│ │             │            │
 │  │  Clinical Tab│ │  Billing Sys │ │  Infusion    │            │
 │  └──────────────┘ └──────────────┘ │  Pumps       │            │
 │                                     │  Patient Mon.│            │
@@ -126,24 +108,21 @@ TSHI operates a **hub-and-spoke network** with the main hospital campus in Newar
 │  Admin WS       │ │  Admin WS       │ │  Admin WS       │
 │  Medical Devices│ │  Medical Devices│ │  Medical Devices│
 │                 │ │                 │ │                 │
-│  ⚠️ Key Locks   │ │  ⚠️ Key Locks   │ │  ⚠️ Key Locks   │
+│   Key Locks     │ │   Key Locks      │ │    Key Locks    │
 │  No Badge Access│ │  No Badge Access│ │  No Badge Access│
 └─────────────────┘ └─────────────────┘ └─────────────────┘
 ```
 
+
+
+**Main Campus Network Segments**
 ---
 
-## 3. Main Campus Network Segments
-
 <!-- 
-Network segmentation divides the network into separate zones
-controlled by firewall rules or VLAN configuration.
-The goal is to limit lateral movement — if an attacker
-compromises one segment, segmentation prevents them from
-freely moving to other segments.
 TSHI has partial segmentation — VLANs exist for clinical and administrative
 but the boundaries between them are not strictly enforced,
 and medical devices are not fully isolated.
+
 The guest Wi-Fi is the ONLY fully isolated segment —
 it cannot reach any internal systems at all.
 The security gap is that a compromised medical device on the medical device network
@@ -160,20 +139,12 @@ because they share or have minimal barriers between segments.
 | Guest / Patient Wi-Fi | VLAN 99 | Patient and visitor wireless devices | Fully isolated — no internal access | No |
 | Data Center | Internal | All virtualized servers, SAN, AD controllers, backup systems | Protected by access controls — not separately segmented from management | Yes — hosts EHR |
 
+
+
+**Perimeter Security Architecture**
 ---
 
-## 4. Perimeter Security Architecture
-
 <!-- 
-The perimeter is the boundary between TSHI's internal network
-and the outside world — primarily the internet.
-The NGFW (Next-Generation Firewall) is the primary control at this boundary.
-Unlike a traditional packet-filtering firewall that only looks at
-IP addresses and ports, an NGFW can inspect the content of traffic,
-identify applications, and block threats based on what the traffic IS
-rather than just where it came from.
-The perimeter is only one layer of defense — defense in depth
-requires controls inside the network as well.
 TSHI's perimeter is reasonably mature — the gaps are INSIDE the network
 (limited internal segmentation, no SIEM, no EDR)
 rather than at the perimeter.
@@ -189,12 +160,12 @@ INTERNET
 │         PERIMETER FIREWALL           │
 │         (Next-Gen Firewall)          │
 │                                      │
-│  ✅ Stateful inspection              │
-│  ✅ Application-layer filtering      │
-│  ✅ Intrusion Prevention (IPS)       │
-│  ✅ VPN termination                  │
-│  ⚠️ No internal network IPS         │
-│  ⚠️ No web application firewall      │
+│   Stateful inspection                │
+│   Application-layer filtering        │
+│   Intrusion Prevention (IPS)         │
+│   VPN termination                    │
+│   No internal network IPS            │
+│   No web application firewall        │
 └──────────────────┬───────────────────┘
                    │
     ┌──────────────┼──────────────┐
@@ -216,11 +187,11 @@ INBOUND EMAIL (Internet)
 │     Microsoft Defender for          │
 │     Office 365 (Basic Tier)         │
 │                                     │
-│  ✅ Spam filtering                  │
-│  ✅ Basic malware scanning          │
-│  ⚠️ No advanced phishing protection │
-│  ⚠️ No attachment sandboxing        │
-│  ⚠️ No impersonation protection     │
+│   Spam filtering                    │
+│   Basic malware scanning            │
+│   No advanced phishing protection   │
+│   No attachment sandboxing          │
+│   No impersonation protection       │
 └──────────────────┬──────────────────┘
                    │
                    ▼
@@ -228,9 +199,9 @@ INBOUND EMAIL (Internet)
           (Exchange Online)
 ```
 
----
 
-## 5. Remote Access Architecture
+**Remote Access Architecture**
+---
 
 <!-- 
 Remote access has become critical in healthcare since the pandemic.
@@ -258,9 +229,9 @@ REMOTE USER / VENDOR
 │    (Cisco AnyConnect)            │
 │                                  │
 │  Authentication:                 │
-│  ✅ Username + Password          │
-│  ⚠️ MFA — partially deployed    │
-│     (not enforced for all users) │
+│     Username + Password          │
+│      MFA — partially deployed    │
+│                                  │
 │                                  │
 │  Split Tunneling: Disabled       │
 │  Session Logging: Basic          │
@@ -300,9 +271,9 @@ a dedicated private connection like MPLS.
 │  │  - Exchange Online   │    │  (Encrypted backups from      │  │
 │  │  - SharePoint        │    │   on-premise Veeam)           │  │
 │  │  - Teams             │    │                               │  │
-│  │  - Epic Cloud Modules│    │  ⚠️ Configuration not         │  │
+│  │  - Epic Cloud Modules│    │     Configuration not         │  │
 │  │                      │    │     regularly audited         │  │
-│  │  ⚠️ MFA partially    │    └──────────────────────────────┘  │
+│  │     MFA partially    │    └──────────────────────────────┘  │
 │  │     deployed         │                                        │
 │  └──────────────────────┘                                        │
 │                                                                  │
@@ -310,8 +281,8 @@ a dedicated private connection like MPLS.
 │  │  SaaS — Patient      │    │  SaaS — HRIS                  │  │
 │  │  Scheduling          │    │  (Employee Records, Payroll)  │  │
 │  │  (Telehealth also    │    │                               │  │
-│  │   SaaS)              │    │  MFA: ✅ Enforced             │  │
-│  │  MFA: ⚠️ Partial    │    └──────────────────────────────┘  │
+│  │   SaaS)              │    │  MFA:    Enforced             │  │
+│  │  MFA:     Partial    │    └──────────────────────────────┘  │
 │  └──────────────────────┘                                        │
 └─────────────────────────────────────────────────────────────────┘
           ▲                  ▲
@@ -324,9 +295,10 @@ a dedicated private connection like MPLS.
 └─────────────────────────────────────────────────────┘
 ```
 
----
 
-## 7. Identified Network Security Gaps
+
+**Identified Network Security Gaps**
+---
 
 <!-- 
 This section summarizes the network-level security gaps
@@ -350,7 +322,8 @@ but a tool that reveals security weaknesses.
 
 ---
 
-## 8. Legend
+**Legend**
+---
 
 ```
 LEGEND:
@@ -358,9 +331,9 @@ LEGEND:
 - - - -  Internet connection (encrypted, public network)
 ──────▶  Traffic direction
 [VLAN X] Virtual LAN segment
-✅       Control in place and effective
-⚠️       Control partially implemented or with identified gap
-❌       Control absent
+        Control in place and effective
+        Control partially implemented or with identified gap
+        Control absent
 ```
 
 ---
