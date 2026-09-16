@@ -1,5 +1,4 @@
 <!-- 
-WHAT IS THIS FILE?
 This is the RACI Matrix — a governance tool that defines
 who is Responsible, Accountable, Consulted, and Informed
 for every major security activity in TSHI's risk assessment program.
@@ -14,28 +13,19 @@ I — Informed: people who are kept updated AFTER decisions are made
 The RACI matrix solves one of the most common organizational problems:
 "I thought YOU were doing that."
 When roles are ambiguous, tasks fall through the cracks.
-When everyone is accountable, no one is accountable.
-The RACI matrix makes accountability explicit and unambiguous.
-In the context of a risk assessment this matters because
-security activities span multiple departments —
-IT, clinical operations, compliance, legal, HR, and executive leadership
-all have roles to play.
-Without a RACI, each group assumes someone else is handling it.
-This is a standard deliverable in professional security governance programs
-and appears in the reference repo you used as a model.
 -->
 
-# Annex A — RACI Matrix — Tri-State Health Initiative (TSHI)
+# Annex A — RACI Matrix — Tri-State Health Initiative
 
-**Document ID:** TSHI-ANX-RACI-001
-**Version:** 1.0
-**Classification:** Internal Use Only
-**Last Updated:** August 2026
-**Owner:** Chief Information Security Officer (CISO)
+**Document ID: TSHI-ANX-RACI-001
+Version: 1.0
+Classification: Internal Use Only
+Last Updated: August 2026
+Owner: Chief Information Security Officer**
 
+
+**Purpose**
 ---
-
-## 1. Purpose
 
 <!-- 
 This document provides clarity on who does what across TSHI's
@@ -51,9 +41,9 @@ because it surfaces assumptions and disagreements before they become problems.
 
 This RACI Matrix defines roles and responsibilities across TSHI's information security risk assessment program and ongoing security governance activities. It ensures that every significant security activity has a clearly identified owner, executor, and set of stakeholders.
 
----
 
-## 2. Role Definitions
+**Role Definitions**
+---
 
 <!-- 
 These are the specific roles referenced throughout the RACI matrix.
@@ -78,9 +68,10 @@ This is an important distinction in governance documentation.
 | DH | Department Heads | Responsible for security within their respective departments |
 | All Staff | All Workforce Members | Responsible for following security policies in daily work |
 
----
 
-## 3. RACI — Risk Assessment Activities
+
+**RACI — Risk Assessment Activities**
+---
 
 <!-- 
 This section covers the specific activities that make up
@@ -109,9 +100,10 @@ required by HIPAA Security Rule 45 CFR § 164.308(a)(2).
 | Maintain and update risk register | | | | A | C | R | C | | | | |
 | Conduct annual reassessment | I | I | I | A | C | R | C | | | | |
 
----
 
-## 4. RACI — Access Control Activities
+
+**RACI — Access Control Activities**
+---
 
 | Activity | CEO | COO | CIO | CISO | IT Director | IST | CO | CMO | HR | Legal | DH | All Staff |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -126,9 +118,10 @@ required by HIPAA Security Rule 45 CFR § 164.308(a)(2).
 | Manage vendor remote access | | | | A | R | R | C | | | C | | |
 | Review and audit privileged accounts | | | | A | C | R | | | | | | |
 
----
 
-## 5. RACI — Incident Response Activities
+
+**RACI — Incident Response Activities**
+---
 
 <!-- 
 Incident response is the area where RACI confusion causes the most damage.
@@ -157,9 +150,10 @@ This authority must be established in advance — not negotiated during a breach
 | Conduct lessons-learned review | | C | C | A | R | R | C | C | | | | |
 | Update IR plan post-incident | | | | A | C | R | C | | | | | |
 
----
 
-## 6. RACI — Business Continuity Activities
+
+**RACI — Business Continuity Activities**
+---
 
 | Activity | CEO | COO | CIO | CISO | IT Director | IST | CO | CMO | HR | Legal | DH | All Staff |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -174,9 +168,10 @@ This authority must be established in advance — not negotiated during a breach
 | Manage recovery operations | | C | A | C | R | R | | C | | | C | |
 | Conduct post-event review | I | C | C | A | R | R | C | C | | | C | |
 
----
 
-## 7. RACI — Compliance Activities
+
+**RACI — Compliance Activities**
+---
 
 | Activity | CEO | COO | CIO | CISO | IT Director | IST | CO | CMO | HR | Legal | DH |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -190,9 +185,10 @@ This authority must be established in advance — not negotiated during a breach
 | Enforce data classification policy | | | | A | R | R | C | C | C | | C |
 | Review and update all security policies | | | | A | C | R | C | | | C | |
 
----
 
-## 8. RACI — Security Operations Activities
+
+**RACI — Security Operations Activities**
+---
 
 | Activity | CEO | COO | CIO | CISO | IT Director | IST | CO | CMO | HR | Legal | DH | All Staff |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -206,9 +202,10 @@ This authority must be established in advance — not negotiated during a breach
 | Respond to security tool alerts | | | | C | C | A/R | | | | | | |
 | Report suspected security incidents | | | | | | | | | | | | R |
 
----
 
-## 9. RACI Summary — Key Governance Principles Applied
+
+**RACI Summary — Key Governance Principles Applied**
+---
 
 <!-- 
 This section summarizes the key governance principles embedded in the RACI above.
@@ -230,17 +227,17 @@ that have organizational-level consequences on their own.
 | Compliance Officer for Regulatory | The CO is Accountable for regulatory notifications and compliance reporting — ensuring legal obligations are not missed |
 | All Staff for Reporting | Every workforce member is Responsible for reporting suspected security incidents — security is everyone's responsibility |
 
----
 
-## 10. Related Documents
+
+**Related Documents**
 
 | Document | Path |
 |---|---|
-| Risk Assessment Policy | [../Docs/Risk_Assessment_Policy.md](../Docs/Risk_Assessment_Policy.md) |
-| Incident Response Policy | [../Policies/Incident_Response_Policy.md](../Policies/Incident_Response_Policy.md) |
-| Business Continuity Policy | [../Policies/Business_Continuity_Policy.md](../Policies/Business_Continuity_Policy.md) |
-| Compliance Matrix | [../Matrices/Compliance_Matrix.md](../Matrices/Compliance_Matrix.md) |
-| NIST Control Mapping | [Annex_B_NIST_Control_Mapping.md](Annex_B_NIST_Control_Mapping.md) |
+| Risk Assessment Policy | [Risk Assessment_Policy](../Docs/Risk_Assessment_Policy.md) |
+| Incident Response Policy | [Incident_Response Policy](../Policies/Incident_Response_Policy.md) |
+| Business Continuity Policy | [Business_Continuity_Policy](../Policies/Business_Continuity_Policy.md) |
+| Compliance Matrix | [Compliance_Matrix](../Matrices/Compliance_Matrix.md) |
+| NIST Control Mapping | [Annex_B_NIST_Control_Mapping](Annex_B_NIST_Control_Mapping.md) |
 
 ---
 
