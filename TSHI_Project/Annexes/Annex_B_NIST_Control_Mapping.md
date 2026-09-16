@@ -1,5 +1,4 @@
 <!-- 
-WHAT IS THIS FILE?
 This file maps the risks identified in the Risk Register
 to specific security controls from NIST SP 800-53 Rev. 5 —
 the federal government's comprehensive catalog of security and privacy controls.
@@ -26,17 +25,18 @@ knowing 800-53 control families is essential —
 they form the backbone of federal agency security programs.
 -->
 
-# Annex B — NIST SP 800-53 Control Mapping — Tri-State Health Initiative (TSHI)
+# Annex B — NIST SP 800-53 Control Mapping — Tri-State Health Initiative
 
-**Document ID:** TSHI-ANX-NIST-001
-**Version:** 1.0
-**Classification:** Internal Use Only
-**Last Updated:** August 2026
-**Owner:** Information Security Team / CISO
+**Document ID: TSHI-ANX-NIST-001
+Version: 1.0
+Classification: Internal Use Only
+Last Updated: August 2026
+Owner: Information Security Team / CISO**
 
+
+
+**Purpose**
 ---
-
-## 1. Purpose
 
 <!-- 
 This document bridges the gap between risk findings and standardized controls.
@@ -49,9 +49,10 @@ so that remediation decisions are grounded in federal standards.
 
 This document maps identified TSHI risks to applicable security controls from NIST SP 800-53 Rev. 5 — Security and Privacy Controls for Information Systems and Organizations. The mapping provides a standards-based framework for implementing the remediation actions recommended in the Risk Register.
 
----
 
-## 2. NIST SP 800-53 Control Family Overview
+
+**NIST SP 800-53 Control Family Overview**
+---
 
 <!-- 
 NIST SP 800-53 organizes its controls into 20 control families.
@@ -94,9 +95,10 @@ These are the families you should know cold going into any federal cybersecurity
 | System and Information Integrity | SI | Malware protection, patching, and system monitoring |
 | Supply Chain Risk Management | SR | Third-party and vendor security risk management |
 
----
 
-## 3. Risk-to-Control Mapping
+
+**Risk-to-Control Mapping**
+---
 
 <!-- 
 This section maps each identified TSHI risk to the specific NIST 800-53
@@ -128,7 +130,7 @@ from ad-hoc security decisions.
 | SC-7 | Boundary Protection | Requires monitoring of communications at system boundaries — addresses perimeter security |
 | RA-5 | Vulnerability Monitoring and Scanning | Requires vulnerability scanning — addresses inconsistent patching |
 
----
+
 
 ### TSHI-RISK-002 — Unauthorized Access to EHR via Compromised Credentials
 
@@ -328,15 +330,15 @@ Many federal job postings reference 800-53 control families directly.
 
 ---
 
-## 5. Related Documents
+**Related Documents**
 
 | Document | Path |
 |---|---|
-| Risk Register | [../Risk/Risk_Register.md](../Risk/Risk_Register.md) |
-| Compliance Matrix | [../Matrices/Compliance_Matrix.md](../Matrices/Compliance_Matrix.md) |
-| Risk Rating Matrix | [../Matrices/Risk_Rating_Matrix.md](../Matrices/Risk_Rating_Matrix.md) |
-| NIST 800-30 Methodology | [../Docs/NIST_800-30_Methodology.md](../Docs/NIST_800-30_Methodology.md) |
-| RACI Matrix | [Annex_A_RACI_Matrix.md](Annex_A_RACI_Matrix.md) |
+| Risk Register | [Risk_Register](../Risk/Risk_Register.md) |
+| Compliance Matrix | [Compliance_Matrix](../Matrices/Compliance_Matrix.md) |
+| Risk Rating Matrix | [Risk_Rating_Matrix](../Matrices/Risk_Rating_Matrix.md) |
+| NIST 800-30 Methodology | [NIST_800-30_Methodology](../Docs/NIST_800-30_Methodology.md) |
+| RACI Matrix | [Annex_A_RACI_Matrix](Annex_A_RACI_Matrix.md) |
 
 ---
 
